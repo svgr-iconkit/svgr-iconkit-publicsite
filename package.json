@@ -1,0 +1,74 @@
+{
+  "name": "public-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "build:docs": "docusaurus build && cp -rf ./build/* ../../docs/",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "subpackages:install": "node ../scripts/install-all-package.js",
+    "subpackages:link": "node ../scripts/link-all-package.js"
+  },
+  "dependencies": {
+    "@bootstrap-styled/provider": "^2.0.3",
+    "@bootstrap-styled/v4": "^3.4.0",
+    "@docusaurus/core": "2.0.0-beta.3",
+    "@docusaurus/preset-classic": "2.0.0-beta.3",
+    "@mdx-js/react": "^1.6.21",
+    "@svgr-iconkit/ant-design": "^0.2.0-alpha.5",
+    "@svgr-iconkit/bootstrap": "^0.2.0-alpha.5",
+    "@svgr-iconkit/core": "^0.2.0-alpha.5",
+    "@svgr-iconkit/css-gg": "^0.2.0-alpha.5",
+    "@svgr-iconkit/entypo": "^0.2.0-alpha.5",
+    "@svgr-iconkit/feather": "^0.2.0-alpha.5",
+    "@svgr-iconkit/flag-icons": "^0.2.0-alpha.5",
+    "@svgr-iconkit/fluentui-system": "^0.2.0-alpha.5",
+    "@svgr-iconkit/fontawesome5": "^0.2.0-alpha.5",
+    "@svgr-iconkit/fontawesome5-brands": "^0.2.0-alpha.5",
+    "@svgr-iconkit/fontisto": "^0.2.0-alpha.5",
+    "@svgr-iconkit/foundation": "^0.2.0-alpha.5",
+    "@svgr-iconkit/heroicons": "^0.2.0-alpha.5",
+    "@svgr-iconkit/ionicons": "^0.2.0-alpha.5",
+    "@svgr-iconkit/material-community": "^0.2.0-alpha.5",
+    "@svgr-iconkit/material-design": "^0.2.0-alpha.5",
+    "@svgr-iconkit/octicons": "^0.2.0-alpha.5",
+    "@svgr-iconkit/simple-icons": "^0.2.0-alpha.5",
+    "@svgr-iconkit/typicons": "^0.2.0-alpha.5",
+    "@svgr/webpack": "^5.5.0",
+    "clsx": "^1.1.1",
+    "dot-prop": "^6.0.1",
+    "file-loader": "^6.2.0",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
+    "react-awesome-styled-grid": "^3.1.4",
+    "react-color": "^2.19.3",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5",
+    "url-loader": "^4.1.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.1.0",
+    "docusaurus-plugin-module-alias": "^0.0.2"
+  }
+}

@@ -1,0 +1,15 @@
+*.log
+*.bak
+*.lock
+tmp/
+node_modules/
+lib/
+dist/
+build/
+tmp/
+gen/
+cache/
+.DS_Store
+
+report.*.json
+.npmrc
