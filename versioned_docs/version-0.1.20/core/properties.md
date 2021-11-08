@@ -10,7 +10,7 @@ For all iconset, it provide below properties:
 | --- | --- | --- | --- | --- |
 | name | string | Yes | 0.1.20 | Icon name from the iconset |
 | variant | string | No | 0.1.20 | Variant from the iconset. In general, it will be 'regular' or default variant from that iconset. | 
-| color | string | No | 0.1.20 | The current color of the icon. It won't be effective if the iconset's ```colorize``` is ```false``` . |
+| color | string | No | 0.1.20 | The current color of the icon. |
 | size | string, number | No | 0.1.20 | The sizing of the icon. |
 | fontSize | string, number | No | 0.1.20 | The sizing of the icon. If ```fontSize``` give, it will override ```size``` values. | 
 
