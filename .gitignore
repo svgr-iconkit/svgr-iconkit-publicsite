@@ -13,3 +13,4 @@ cache/
 
 report.*.json
 .npmrc
+.docusaurus
