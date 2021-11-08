@@ -10,7 +10,7 @@ module.exports = {
   url: "https://svgr-iconkit.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  organizationName: "facebook", // Usually your GitHub org/user name.
+  organizationName: "svgr-iconkit", // Usually your GitHub org/user name.
   projectName: "svgr-iconkit-publicsite", // Usually your repo name.
   themes: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
