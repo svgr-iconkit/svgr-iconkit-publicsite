@@ -64,8 +64,8 @@ module.exports = {
               to: "/docs/intro",
             },
             {
-              label: "Create owned iconset",
-              to: "/docs/advanced-usage/create-owned-iconset",
+              label: "Explorer",
+              to: "/explorer",
             },
           ],
         },
@@ -132,8 +132,8 @@ module.exports = {
           },
           {
             path: "/expo-explorer",
-            exact: false,
-            component: "@apps/icons-explorer",
+            exact: true,
+            component: "@apps/expo-explorer",
           },
         ],
       },
