@@ -89,7 +89,7 @@ export default function DetailExplorer() {
           })}
         </Box>
         <Box position="relative" as={Row}>
-          <Col md={4}>
+          <Box as={Col} zIndex={5} md={4}>
             <Box top="5rem" position="sticky">
               <IconsetInfoPanel
                 variantName={currentVariant}
@@ -116,8 +116,8 @@ export default function DetailExplorer() {
                 onChangeRenderingType={setRenderingType}
               />
             </Box>
-          </Col>
-          <Col md={8}>
+          </Box>
+          <Box as={Col} zIndex={0} md={8}>
             {isSearchMode && (
               <Box bgColor="#efefef" my={2}>
                 <span>
@@ -140,7 +140,7 @@ export default function DetailExplorer() {
                 onShowMore={onShowMore}
               />
             </SpinnerOverlay>
-          </Col>
+          </Box>
         </Box>
       </Box>
     </Container>
