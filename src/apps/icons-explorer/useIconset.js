@@ -2,10 +2,11 @@
 import { useCallback, useEffect, useState } from "react";
 
 export function useIconset({ iconsets = [] }) {
-  const [currentIconsetIndex, setIconsetIndex] = useState(0);
+  const [currentIconsetIndex, setIconsetIndex] = useState(-1);
   const [currentVariant, setVariant] = useState("regular");
   const [iconsetInfo, setIconsetInfo] = useState(null);
   const [, setUpdateTime] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const onChangeIconset = useCallback((newIndex) => {
     setIconsetIndex(newIndex);
@@ -18,7 +19,7 @@ export function useIconset({ iconsets = [] }) {
   const tmpIconsetInfo = iconsets[currentIconsetIndex] || {};
 
   useEffect(() => {
-    if (!tmpIconsetInfo.resources || tmpIconsetInfo.__loaded) {
+    if (!tmpIconsetInfo || !tmpIconsetInfo.resources || tmpIconsetInfo.__loaded) {
       return;
     }
     if (typeof tmpIconsetInfo.resources !== "function") {
@@ -34,6 +35,7 @@ export function useIconset({ iconsets = [] }) {
       return;
     }
     async function run() {
+      setLoading(true);
       const { Icon, ...restProps } = await tmpIconsetInfo.resources();
 
       const _info = {
@@ -44,11 +46,13 @@ export function useIconset({ iconsets = [] }) {
       };
       setUpdateTime(Date.now());
       setIconsetInfo(_info);
+      setLoading(false);
     }
     run();
   }, [tmpIconsetInfo, currentIconsetIndex]);
 
   return {
+    loading,
     iconsetInfo,
     currentIconsetIndex,
     setIconsetIndex,

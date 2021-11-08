@@ -1,18 +1,19 @@
-import React from "react";
-import clsx from "clsx";
-import Layout from "@theme/Layout";
+import { Container } from "@bootstrap-styled/v4";
 import Link from "@docusaurus/Link";
-import { Icon } from "@svgr-iconkit/core";
-import Heart from "@svgr-iconkit/bootstrap/icons/regular/heart";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./index.module.css";
+import ArrowRight from "@svgr-iconkit/fontawesome5/icons/regular/arrow-alt-circle-right";
+import { Icon } from "@svgr-iconkit/core";
+import Layout from "@theme/Layout";
+import clsx from "clsx";
+import React from "react";
 import HomepageFeatures from "../components/HomepageFeatures";
+import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
+      <Container>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -20,10 +21,10 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Docusaurus Tutorial - 5min ⏱️
+            Get Started in 1 mins <Icon content={ArrowRight} size={18} />
           </Link>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }
@@ -32,12 +33,11 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
       <main>
-        <Icon content={Heart} color="black" size={24} />
         <HomepageFeatures />
       </main>
     </Layout>

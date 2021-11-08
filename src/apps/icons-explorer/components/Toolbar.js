@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Box from "./Box";
+import Box from "../../../components/Box";
 
 const Toolbar = styled(Box)`
   margin-bottom: 5px;

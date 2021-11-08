@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components"
+import { compose, layout, position, space} from "styled-system";
 import { themeGet } from "./utils";
 
 const trackH = "0.4em";
 const thumbD = "1.5em";
 const trackC = themeGet("$btn-primary-bg");
-const filllC = "#ffc069";
+const filllC = themeGet("$btn-primary-bg");
 
 const track = css`
   box-sizing: border-box;
@@ -72,6 +73,8 @@ const SliderInput = styled.input.attrs({type: "range"})`
   height: ${thumbD};
   background: transparent;
   font: 1em/1 arial, sans-serif;
+
+  ${compose(layout, position, space)}
 
   &::-webkit-slider-runnable-track {
     ${trackFill};

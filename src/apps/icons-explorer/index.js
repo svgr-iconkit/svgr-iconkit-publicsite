@@ -1,8 +1,9 @@
-import React from "react";
-import Layout from "@theme/Layout";
+import { Redirect, Route, Switch, useRouteMatch } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { Switch, Route, useRouteMatch } from "@docusaurus/router";
-import IconsExplorer from "./Portal";
+import Layout from "@theme/Layout";
+import React from "react";
+import { iconsets } from "./config";
+import DetailExplorer from "./DetailExplorer";
 
 export default function IconExplorerPage() {
   const { siteConfig } = useDocusaurusContext();
@@ -13,8 +14,17 @@ export default function IconExplorerPage() {
       description="All available iconset from original"
     >
       <Switch>
-        <Route path={`${matches.url}/:familyName`} exact component={IconsExplorer} />
-        <Route path={matches.url} exact component={IconsExplorer} />
+        <Route
+          path={`${matches.url}/:packageName`}
+          exact
+          component={DetailExplorer}
+        />
+        {/* <Route path={matches.url} exact component={Summary} /> */}
+        <Redirect
+          path={matches.url}
+          exact
+          to={`${matches.url}/${iconsets[0].packageName}`}
+        />
       </Switch>
     </Layout>
   );

@@ -1,84 +1,85 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const path = require('path')
-const dynamicRoute = require('./plugins/dynamic-routes');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const path = require("path");
+const dynamicRoute = require("./plugins/dynamic-routes");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'svgr-iconkit',
-  tagline: 'Iconkit for react web & mobile',
-  url: 'https://svgr-iconkit.dev',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  title: "svgr-iconkit",
+  tagline: "SVG Iconkit for react web & mobile",
+  url: "https://svgr-iconkit.dev",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  organizationName: "facebook", // Usually your GitHub org/user name.
+  projectName: "svgr-iconkit-publicsite", // Usually your repo name.
+  themes: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
+    gtag: {
+      // You can also use your "G-" Measurement ID here.
+      trackingID: "GTM-T35974N",
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
     navbar: {
-      title: 'svgr-iconkit',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      title: "svgr-iconkit",
       items: [
+        {
+          type: "docsVersionDropdown",
+        },
+        {
+          type: "doc",
+          docId: "intro",
+          position: "left",
+          label: "Docs",
+        },
+        {
+          position: "left",
+          label: "Icons Explorer",
+          to: "/explorer",
+        },
         // {
-        //   type: 'docsVersionDropdown',
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
+        // {
+        //   href: "https://expo.dev/@lemankk/svgr-iconkit-expo-explorer",
+        //   label: "Expo Explorer",
+        //   position: "right",
         // },
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          position: 'left',
-          label: 'Icons Explorer',
-          to: '/icons-explorer',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
-        },
-        {
-          href: 'https://svgr-iconkit.dev/expo-explorer',
-          label: 'Expo Explorer',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/svgr-iconkit/svgr-iconkit',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/svgr-iconkit/svgr-iconkit",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: "Intro",
+              to: "/docs/intro",
             },
             {
-              label: 'Advanced Usage',
-              to: '/docs/advanced-usage',
+              label: "Create owned iconset",
+              to: "/docs/advanced-usage/create-owned-iconset",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/svgr-iconkit/svgr-iconkit',
+              label: "GitHub",
+              href: "https://github.com/svgr-iconkit/svgr-iconkit",
             },
           ],
         },
       ],
-      copyright: `Built with Docusaurus.`,
+      copyright: `Built with Docusaurus & @bootstrap-styled.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -86,50 +87,56 @@ module.exports = {
     },
   },
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            "https://github.com/svgr-iconkit/svgr-iconkit-publicsite/edit/master/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
   ],
   plugins: [
     [
-      'docusaurus-plugin-module-alias',
+      "docusaurus-plugin-module-alias",
       {
-          alias: {
-              '@apps': path.resolve(__dirname, './src/apps'),
-          },
+        alias: {
+          "@apps": path.resolve(__dirname, "./src/apps"),
+        },
       },
     ],
     [
-      dynamicRoute, {
+      dynamicRoute,
+      {
         routes: [
+          // {
+          //   path: "/expo-explorer",
+          //   exact: true,
+          //   type: "redirect",
+          //   to: "/explorer"
+          // },
           {
-            path: '/icons-explorer',
+            path: "/explorer",
             exact: false,
-            component: '@apps/icons-explorer',
-          }
-        ]
-      }
-    ]
+            component: "@apps/icons-explorer",
+          },
+          {
+            path: "/expo-explorer",
+            exact: false,
+            component: "@apps/icons-explorer",
+          },
+        ],
+      },
+    ],
   ],
 };

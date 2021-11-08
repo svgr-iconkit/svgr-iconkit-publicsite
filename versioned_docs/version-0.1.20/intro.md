@@ -14,7 +14,6 @@ It provide below benefits:
 - All svg content exported as pure JS data easier to be reuse in other platform and/or in-app updates solution like CodePush in react native.
 
 
-
 ## Install packages
 
 Install package in your react.js, react-native or expo project
