@@ -89,7 +89,7 @@ export default function DetailExplorer() {
           })}
         </Box>
         <Box position="relative" as={Row}>
-          <Box as={Col} zIndex={5} md={4}>
+          <Box as={Col} zIndex={2} md={4}>
             <Box top="5rem" position="sticky">
               <IconsetInfoPanel
                 variantName={currentVariant}
@@ -110,7 +110,7 @@ export default function DetailExplorer() {
                 keyword={keyword}
                 onChangeKeyword={(keyword) => {
                   setKeyword(keyword);
-                  setMaxIconsShown(50);
+                  setMaxIconsShown(pageSize);
                 }}
                 renderingType={renderingType}
                 onChangeRenderingType={setRenderingType}
