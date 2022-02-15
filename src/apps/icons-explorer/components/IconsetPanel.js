@@ -1,10 +1,15 @@
 import {
-  Badge, Button,
-  ButtonGroup, Card,
-  CardBlock, CardText, CardTitle
+  Badge,
+  Button,
+  ButtonGroup,
+  Card,
+  CardBlock,
+  CardText,
+  CardTitle,
 } from "@bootstrap-styled/v4";
 import { Icon } from "@svgr-iconkit/core";
 import IconNpm from "@svgr-iconkit/fontawesome5-brands/icons/regular/npm";
+import LinkIconContent from "@svgr-iconkit/heroicons/icons/outline/link";
 import React, { useState } from "react";
 import { Box } from "../../../components/Box";
 import Label from "../../../components/Label";
@@ -20,6 +25,8 @@ export default function IconsetPanel({
   const {
     name: familyName,
     packageName,
+    originalAuthor,
+    license,
     version,
     variantNames = [],
     iconNames = [],
@@ -56,6 +63,32 @@ export default function IconsetPanel({
               >
                 {iconsetWithScope(packageName)}
               </Text>
+            </Box>
+            <Box
+              my={1}
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+            >
+              <Label>Creator</Label>
+              <Box>
+                <Text
+                  as="a"
+                  href={originalAuthor.url}
+                  target="_blank"
+                  display="flex"
+                  alignItems="center"
+                >
+                  <Box mr=".25rem" as="span">
+                    {originalAuthor.name}
+                  </Box>
+                  <Icon content={LinkIconContent} size={12} />
+                </Text>
+              </Box>
+            </Box>
+            <Box my={2}>
+              <Label>License</Label>
+              <Text>{license}</Text>
             </Box>
             <Box my={2}>
               <Label>Required core version</Label>

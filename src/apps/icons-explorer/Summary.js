@@ -19,7 +19,7 @@ export default function DetailExplorer() {
   };
 
   return (
-    <Container>
+    <Box as={Container} backgroundColor="transparent">
       <Box py={4}>
         <Header>
           <H1>Icons Explorer</H1>
@@ -37,6 +37,6 @@ export default function DetailExplorer() {
           })}
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 }

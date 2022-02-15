@@ -48,9 +48,27 @@ export default function App() {
 
 ### React Native or Expo
 
+
 ```javascript
 import { View } from "react-native";
 import FontawesomeIcon from "@svgr-iconkit/fontawesome5";
+
+export default function App() {
+  return <View>
+    <FontawesomeIcon name="heart" color="red" size={24} />
+  </View>
+}
+```
+
+#### Using with react-native-web
+
+Due to limitation of webpack resolving used in ```react-native-web```, it's suggested to use "/native" entry for React Native / Expo project. 
+
+Example:
+
+```javascript
+import { View } from "react-native";
+import FontawesomeIcon from "@svgr-iconkit/fontawesome5/native";
 
 export default function App() {
   return <View>
