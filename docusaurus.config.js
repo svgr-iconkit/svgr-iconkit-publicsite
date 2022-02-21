@@ -134,13 +134,13 @@ module.exports = {
         anonymizeIP: true, // Should IPs be anonymized?
       },
     ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-sitemap',
+    //   {
+    //     changefreq: 'weekly',
+    //     priority: 0.5,
+    //   },
+    // ],
     [
       dynamicRoute,
       {
