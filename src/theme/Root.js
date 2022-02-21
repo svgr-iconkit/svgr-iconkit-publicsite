@@ -1,5 +1,6 @@
 import React from "react";
 import { BootstrapProvider } from "@bootstrap-styled/provider";
+import { useColorMode } from "@docusaurus/theme-common";
 // Default implementation, that you can customize
 
 const v = {
@@ -13,7 +14,8 @@ v["$border-radius-lg"] = "1.5rem";
 v["$border-radius-sm"] = "2rem";
 
 function Root({ children }) {
-  return <BootstrapProvider theme={v}>{children}</BootstrapProvider>;
+  const theme = { ...v };
+  return <BootstrapProvider theme={theme}>{children}</BootstrapProvider>;
 }
 
 export default Root;

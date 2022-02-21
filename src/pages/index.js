@@ -1,4 +1,5 @@
 import { Container } from "@bootstrap-styled/v4";
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import ArrowRight from "@svgr-iconkit/fontawesome5/icons/regular/arrow-alt-circle-right";
@@ -13,13 +14,14 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      
       <Container>
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <img width="280" src={useBaseUrl('/img/logo.svg')} alt={siteConfig.title} />
+        <p className={clsx("hero__subtitle", styles.heroBannerSubtitle)}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/0.2.0/intro"
           >
             Get Started in 1 mins <Icon content={ArrowRight} size={18} />
           </Link>

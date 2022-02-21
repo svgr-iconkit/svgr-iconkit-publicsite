@@ -14,14 +14,17 @@ module.exports = {
   projectName: "svgr-iconkit-publicsite", // Usually your repo name.
   themes: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
-    gtag: {
-      // You can also use your "G-" Measurement ID here.
-      trackingID: "GTM-T35974N",
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
-    },
+    image: "img/64.png",
     navbar: {
       title: "svgr-iconkit",
+      logo: {
+        alt: "SVGR IconKit",
+        src: "img/logo.svg",
+        href: "/",
+        target: "_self",
+        width: 32,
+        height: 32,
+      },
       items: [
         {
           type: "docsVersionDropdown",
@@ -99,6 +102,13 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             "https://github.com/svgr-iconkit/svgr-iconkit-publicsite/edit/master/",
+          lastVersion: "current",
+          versions: {
+            current: {
+              label: "0.2.0",
+              path: "0.2.0",
+            },
+          },
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -113,6 +123,22 @@ module.exports = {
         alias: {
           "@apps": path.resolve(__dirname, "./src/apps"),
         },
+      },
+    ],
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        // You can also use your "G-" Measurement ID here.
+        trackingID: "GTM-T35974N",
+        // Optional fields.
+        anonymizeIP: true, // Should IPs be anonymized?
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
       },
     ],
     [

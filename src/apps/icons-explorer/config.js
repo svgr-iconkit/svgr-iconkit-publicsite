@@ -174,7 +174,7 @@ export const iconsets = [
     resources: () => import('./iconset/SimpleIcons'),
   },
   {
-    packageName: "Typicons",
+    packageName: "typicons",
     name: "Typicons Icons",
     version: "0.1.20",
     "license": "CC-BY-SA",
@@ -239,6 +239,17 @@ export const iconsets = [
       "url": "https://syaluiux.gumroad.com/l/Xnix500"
     },
     resources: () => import('./iconset/XnixIcons'),
+  },
+  {
+    packageName: "themify-icons",
+    name: "Themify Icons",
+    version: "0.2.0",
+    license: "MIT",
+    "originalAuthor": {
+      "name": "Themify Icons",
+      "url": "https://themify.me/themify-icons"
+    },
+    resources: () => import('./iconset/ThemifyIcons'),
   }
 ];
 
