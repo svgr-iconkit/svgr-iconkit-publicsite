@@ -64,7 +64,7 @@ module.exports = {
           items: [
             {
               label: "Intro",
-              to: "/docs/intro",
+              to: "/docs/0.2.0/intro",
             },
             {
               label: "Explorer",
