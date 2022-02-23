@@ -9,11 +9,11 @@ import TabItem from '@theme/TabItem';
 
 
 
-Inspired by [gregberge/svgr](https://github.com/gregberge/svgr) and [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), the kit set used to rendering SVG formatted icon content directly and cross-platform from React.js, React-Native and Expo.
+Inspired by [gregberge/svgr](https://github.com/gregberge/svgr) and [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), the kit set used to rendering SVG formatted icon content directly and supporting different framework/ platform on Next.js React.js, React-Native and Expo.
 
 It provide below benefits:
 - Standardize same set of icons.
-- Easy to integrate with styled-components.
+- Easy to integrate with styled-components or css based framework (for web only).
 - All svg content exported as pure JS data easier to be reuse in other platform and/or in-app updates solution like CodePush in react native.
 
 
@@ -45,7 +45,7 @@ yarn add @svgr-iconkit/core @svgr-iconkit/fontawesome5
 
 Import icon from your project 
 
-### React.js for Web
+### React.js/Next.js for Web
 
 ```javascript
 import FontawesomeIcon from "@svgr-iconkit/fontawesome5";
