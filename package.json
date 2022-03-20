@@ -27,7 +27,7 @@
     "@mdx-js/react": "^1.6.21",
     "@svgr-iconkit/ant-design": "^0.2.0",
     "@svgr-iconkit/bootstrap": "^0.2.0",
-    "@svgr-iconkit/core": "^0.2.0",
+    "@svgr-iconkit/core": "^0.2.2",
     "@svgr-iconkit/css-gg": "^0.2.0",
     "@svgr-iconkit/entypo": "^0.2.0",
     "@svgr-iconkit/feather": "^0.2.0",
