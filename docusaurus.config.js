@@ -145,21 +145,10 @@ module.exports = {
       dynamicRoute,
       {
         routes: [
-          // {
-          //   path: "/expo-explorer",
-          //   exact: true,
-          //   type: "redirect",
-          //   to: "/explorer"
-          // },
           {
             path: "/explorer",
             exact: false,
             component: "@apps/icons-explorer",
-          },
-          {
-            path: "/expo-explorer",
-            exact: true,
-            component: "@apps/expo-explorer",
           },
         ],
       },
