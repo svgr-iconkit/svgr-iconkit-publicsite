@@ -156,11 +156,11 @@ module.exports = {
             exact: false,
             component: "@apps/icons-explorer",
           },
-          {
-            path: "/expo-explorer",
-            exact: true,
-            component: "@apps/expo-explorer",
-          },
+          // {
+          //   path: "/expo-explorer",
+          //   exact: true,
+          //   component: "@apps/expo-explorer",
+          // },
         ],
       },
     ],
