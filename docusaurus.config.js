@@ -9,7 +9,7 @@ module.exports = {
   tagline: "SVG Iconkit for react web & mobile",
   url: "https://svgr-iconkit.dev",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   organizationName: "svgr-iconkit", // Usually your GitHub org/user name.
   projectName: "svgr-iconkit-publicsite", // Usually your repo name.
   themes: ["@docusaurus/theme-live-codeblock"],
@@ -145,22 +145,11 @@ module.exports = {
       dynamicRoute,
       {
         routes: [
-          // {
-          //   path: "/expo-explorer",
-          //   exact: true,
-          //   type: "redirect",
-          //   to: "/explorer"
-          // },
           {
             path: "/explorer",
             exact: false,
             component: "@apps/icons-explorer",
           },
-          // {
-          //   path: "/expo-explorer",
-          //   exact: true,
-          //   component: "@apps/expo-explorer",
-          // },
         ],
       },
     ],

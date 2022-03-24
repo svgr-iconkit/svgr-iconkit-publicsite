@@ -9,11 +9,11 @@ import TabItem from '@theme/TabItem';
 
 
 
-Inspired by [gregberge/svgr](https://github.com/gregberge/svgr) and [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), the kit set used to rendering SVG formatted icon content directly and cross-platform from React.js, React-Native and Expo.
+Inspired by [gregberge/svgr](https://github.com/gregberge/svgr) and [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), the kit set used to rendering SVG formatted icon content directly and supporting different framework/ platform on Next.js React.js, React-Native and Expo.
 
 It provide below benefits:
 - Standardize same set of icons.
-- Easy to integrate with styled-components.
+- Easy to integrate with styled-components or css based framework (for web only).
 - All svg content exported as pure JS data easier to be reuse in other platform and/or in-app updates solution like CodePush in react native.
 
 
@@ -22,12 +22,11 @@ It provide below benefits:
 
 Install package in your react.js, react-native or expo project
 
-
 <Tabs>
   <TabItem value="npm" label="npm" default>
 
 ```shell
-npm install @svgr-iconkit/core @svgr-iconkit/fontawesome5
+npm install @svgr-iconkit/fontawesome5
 ```
 
   </TabItem>
@@ -35,7 +34,7 @@ npm install @svgr-iconkit/core @svgr-iconkit/fontawesome5
   <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @svgr-iconkit/core @svgr-iconkit/fontawesome5
+yarn add @svgr-iconkit/fontawesome5
 ```
   </TabItem>
 </Tabs>
@@ -45,7 +44,7 @@ yarn add @svgr-iconkit/core @svgr-iconkit/fontawesome5
 
 Import icon from your project 
 
-### React.js for Web
+### React.js/Next.js for Web
 
 ```javascript
 import FontawesomeIcon from "@svgr-iconkit/fontawesome5";
@@ -73,9 +72,9 @@ export default function App() {
 
 #### Using with react-native-web
 
-Due to limitation of webpack resolving used in ```react-native-web```, it's suggested to use "/native" entry for React Native / Expo project. 
+Due to limitation of webpack resolving used in ```react-native-web```, it's suggested to use "/native" from package or adding ".web.js" when resolving files in webpack configuration. 
 
-Example:
+Example 1:
 
 ```javascript
 import { View } from "react-native";
@@ -87,3 +86,7 @@ export default function App() {
   </View>
 }
 ```
+
+Example 2:
+
+See sample of webpack config https://github.com/svgr-iconkit/svgr-iconkit/blob/main/examples/expo-explorer/webpack.config.js

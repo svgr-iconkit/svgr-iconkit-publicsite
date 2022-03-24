@@ -89,7 +89,7 @@ export const Iconset = createFamily<IconNames, IconVariant>({
   defaultVariant,
   colorize,
 });
-export const variants = createVariantsMap({
+export const variants = createVariantsMap<IconNames, IconVariant>({
   familyName,
   variantNames,
   colorize,
@@ -119,7 +119,7 @@ export const Iconset = createFamily<IconNames, IconVariant>({
   defaultVariant,
   colorize,
 });
-export const variants = createVariantsMap({
+export const variants = createVariantsMap<IconNames, IconVariant>({
   familyName,
   variantNames,
   colorize,
@@ -134,9 +134,9 @@ export default Iconset;
   "name": "module-name",
   "version": "0.1.0",
   "main": "index",
-  "react-native": "native",
+  "react-native": "index",
   "commonjs": "index",
-  "module": "lib/es/index.js",
+  "module": "index.esm",
   "types": "index",
   "directories": {
     "icons": "icons",
@@ -247,6 +247,18 @@ module.exports = require('./lib/commonjs/native');
 ```
 
 ```javascript title="index.web.js"
+module.exports = require('./lib/commonjs/native');
+```
+
+```javascript title="index.js"
+module.exports = require('./lib/commonjs/index');
+```
+
+```javascript title="index.esm.native.js"
+module.exports = require('./lib/commonjs/native');
+```
+
+```javascript title="index.esm.web.js"
 module.exports = require('./lib/commonjs/native');
 ```
 
