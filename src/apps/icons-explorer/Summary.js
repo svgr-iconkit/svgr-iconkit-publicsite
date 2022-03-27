@@ -29,6 +29,8 @@ export default function DetailExplorer() {
             return (
               <LinkButton
                 key={packageName}
+                data-testid="iconset-link"
+                data-package-name={packageName}
                 onClick={() => onClickIconset(packageName)}
               >
                 {name}

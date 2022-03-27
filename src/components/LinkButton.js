@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import Box from "./Box";
-export const LinkButton = styled(Box).attrs({ tabIndex: 0, role: "button" })`
+export const LinkButton = styled(Box).attrs((props) => {
+  return { tabIndex: 0, role: "button", ...props }
+})`
 display: inline-block;
 padding: 2px 8px;
 border-radius: 5px;

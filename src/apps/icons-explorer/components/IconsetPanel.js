@@ -54,6 +54,7 @@ export default function IconsetPanel({
               <Icon content={IconNpm} color="red" size={24} />
               <Text
                 as="a"
+                data-testid="package-npm-link"
                 href={`https://npmjs.com/package/${iconsetWithScope(
                   packageName
                 )}`}
@@ -64,7 +65,7 @@ export default function IconsetPanel({
                 {iconsetWithScope(packageName)}
               </Text>
             </Box>
-            <Box
+            {!!originalAuthor && <Box
               my={1}
               display="flex"
               flexDirection="column"
@@ -75,6 +76,7 @@ export default function IconsetPanel({
                 <Text
                   as="a"
                   href={originalAuthor.url}
+                  data-testid="creator-link"
                   target="_blank"
                   display="flex"
                   alignItems="center"
@@ -85,7 +87,7 @@ export default function IconsetPanel({
                   <Icon content={LinkIconContent} size={12} />
                 </Text>
               </Box>
-            </Box>
+            </Box>}
             <Box my={2}>
               <Label>License</Label>
               <Text>{license}</Text>
@@ -106,6 +108,8 @@ export default function IconsetPanel({
                 {variantNames.map((name) => (
                   <Button
                     key={name}
+                    data-testid="iconset-variant-button"
+                    data-variant-name={name}
                     onClick={() => onVariantChange(name)}
                     color={variantName === name ? "primary" : "light"}
                   >

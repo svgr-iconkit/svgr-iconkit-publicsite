@@ -17,7 +17,7 @@ const Spin = keyframes`
 `;
 export const Wrapper = ({ content = IconSpinner, ...restProps }) => (
   <Box width="50px" height="50px" {...restProps}>
-    <Icon content={content} />
+    <Icon size={50} content={content} />
   </Box>
 );
 
@@ -27,8 +27,6 @@ export const Spinner = styled(Wrapper)`
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 `;
-
-export default Spinner;
 
 export const SpinnerOverlay = ({
   isProcessing = false,
