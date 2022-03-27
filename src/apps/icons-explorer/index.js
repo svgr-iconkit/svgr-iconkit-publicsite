@@ -1,13 +1,12 @@
-import { Redirect, Route, Switch, useRouteMatch } from "@docusaurus/router";
+import { Route, Switch, Redirect } from "react-router-dom";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import React from "react";
 import { iconsets } from "./config";
 import DetailExplorer from "./DetailExplorer";
 
-export default function IconExplorerPage() {
+export default function IconExplorerPage({ match }) {
   const { siteConfig } = useDocusaurusContext();
-  const matches = useRouteMatch();
   return (
     <Layout
       title={`Icons Explorer - ${siteConfig.title}`}
@@ -15,15 +14,15 @@ export default function IconExplorerPage() {
     >
       <Switch>
         <Route
-          path={`${matches.url}/:packageName`}
+          path={`${match.path}/:packageName`}
           exact
           component={DetailExplorer}
         />
         {/* <Route path={matches.url} exact component={Summary} /> */}
         <Redirect
-          path={matches.url}
+          path={match.path}
           exact
-          to={`${matches.url}/${iconsets[0].packageName}`}
+          to={`${match.path}/${iconsets[0].packageName}`}
         />
       </Switch>
     </Layout>

@@ -1,5 +1,5 @@
 import { Col, Container, H1, Header, Row } from "@bootstrap-styled/v4";
-import { useHistory, useRouteMatch } from "@docusaurus/router";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Box } from "../../components/Box";
 import LinkButton from "../../components/LinkButton";

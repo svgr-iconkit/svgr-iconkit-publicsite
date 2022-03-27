@@ -1,15 +1,14 @@
-import { Redirect, Route, Switch, useRouteMatch } from "@docusaurus/router";
+import { Redirect, Route, Switch } from "react-router-dom";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import React from "react";
 
-export default function OldExpoExplorerPage() {
+export default function OldExpoExplorerPage({ match}) {
   const { siteConfig } = useDocusaurusContext();
-  const matches = useRouteMatch();
   return (<>
     {/* <Route path={matches.url} exact component={Summary} /> */}
     <Redirect
-      path={matches.url}
+      path={match.path}
       exact
       to={`/explorer`}
     />
