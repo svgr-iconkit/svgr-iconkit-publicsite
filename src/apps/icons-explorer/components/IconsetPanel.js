@@ -6,6 +6,8 @@ import {
   CardBlock,
   CardText,
   CardTitle,
+  Col,
+  Row,
 } from "@bootstrap-styled/v4";
 import { Icon } from "@svgr-iconkit/core";
 import IconNpm from "@svgr-iconkit/fontawesome5-brands/icons/regular/npm";
@@ -45,82 +47,70 @@ export default function IconsetPanel({
   }
 
   return (
-    <Box>
-      <Box as={Card}>
-        <CardBlock>
-          <Box>
-            <CardTitle>{familyName}</CardTitle>
-            <Box my={1} display="flex" alignItems="center">
-              <Icon content={IconNpm} color="red" size={24} />
+    <Box m={2}>
+      <Box>
+        <CardTitle>{familyName}</CardTitle>
+        <Box my={1} display="flex" alignItems="center">
+          <Icon content={IconNpm} color="red" size={24} />
+          <Text
+            as="a"
+            data-testid="package-npm-link"
+            href={`https://npmjs.com/package/${iconsetWithScope(packageName)}`}
+            target="_blank"
+            ml=".5rem"
+            fontSize="12px"
+          >
+            {iconsetWithScope(packageName)}
+          </Text>
+        </Box>
+      </Box>
+
+      <Row>
+        {!!originalAuthor && (
+          <Box
+            as={Col}
+            my={1}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            md={4}
+            lg={6}
+          >
+            <Label>Creator</Label>
+            <Box>
               <Text
                 as="a"
-                data-testid="package-npm-link"
-                href={`https://npmjs.com/package/${iconsetWithScope(
-                  packageName
-                )}`}
+                href={originalAuthor.url}
+                data-testid="creator-link"
                 target="_blank"
-                ml=".5rem"
-                fontSize="12px"
+                display="flex"
+                alignItems="center"
               >
-                {iconsetWithScope(packageName)}
+                <Box mr=".25rem" as="span">
+                  {originalAuthor.name}
+                </Box>
+                <Icon content={LinkIconContent} size={12} />
               </Text>
             </Box>
-            {!!originalAuthor && <Box
-              my={1}
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-            >
-              <Label>Creator</Label>
-              <Box>
-                <Text
-                  as="a"
-                  href={originalAuthor.url}
-                  data-testid="creator-link"
-                  target="_blank"
-                  display="flex"
-                  alignItems="center"
-                >
-                  <Box mr=".25rem" as="span">
-                    {originalAuthor.name}
-                  </Box>
-                  <Icon content={LinkIconContent} size={12} />
-                </Text>
-              </Box>
-            </Box>}
-            <Box my={2}>
+          </Box>
+        )}
+        <Col md={8} lg={6}>
+          <Row>
+            <Box as={Col} md={4} lg={4}>
               <Label>License</Label>
               <Text>{license}</Text>
             </Box>
-            <Box my={2}>
+            <Box as={Col} md={4} lg={4}>
               <Label>Required core version</Label>
               <Badge>{version}</Badge>
             </Box>
-            <Box my={2}>
+            <Box as={Col} md={4} lg={4}>
               <Label>Total icons</Label>
               <CardText>{iconNames.length}</CardText>
             </Box>
-          </Box>
-          {variantNames && variantNames.length > 0 && (
-            <Box my={2}>
-              <Label>Variants</Label>
-              <ButtonGroup>
-                {variantNames.map((name) => (
-                  <Button
-                    key={name}
-                    data-testid="iconset-variant-button"
-                    data-variant-name={name}
-                    onClick={() => onVariantChange(name)}
-                    color={variantName === name ? "primary" : "light"}
-                  >
-                    {name}
-                  </Button>
-                ))}
-              </ButtonGroup>
-            </Box>
-          )}
-        </CardBlock>
-      </Box>
+          </Row>
+        </Col>
+      </Row>
     </Box>
   );
 }

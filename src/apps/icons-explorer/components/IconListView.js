@@ -64,13 +64,8 @@ export default function IconListView({
 
   const styledProps = {};
   const iconProps = {};
-  if (renderingType === "styled") {
-    styledProps.iconSize = iconSize;
-    styledProps.iconColor = iconColor;
-  } else {
-    iconProps.size = iconSize;
-    iconProps.color = iconColor;
-  }
+  iconProps.size = iconSize;
+  iconProps.color = iconColor;
   return (
     <IconWrapper {...styledProps}>
       <Grid py={3} my={2}>

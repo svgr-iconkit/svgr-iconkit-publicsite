@@ -17,6 +17,8 @@
   --ifm-code-font-size: 95%;
 
   --ifm-footer-background-color: #061C37;
+
+  --ifm-z-index-fixed: 20;
 }
 
 .docusaurus-highlight-code-line {
@@ -28,4 +30,8 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] {
+  --ifm-toc-border-color: var(--ifm-color-emphasis-100);
 }
