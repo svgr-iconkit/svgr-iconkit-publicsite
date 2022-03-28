@@ -65,6 +65,7 @@ const SidedMenu = styled(Box)`
     position: sticky;
     top: var(--ifm-navbar-height);
     height: 100%;
+    z-index: 0;
     transition: none;
     max-height: calc(100vh - var(--ifm-navbar-height));
     transform: translate(0, 0);
