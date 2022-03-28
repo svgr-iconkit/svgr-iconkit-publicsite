@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1730],{9846:function(e,n,t){t.r(n),t.d(n,{default:function(){return r}});var i=t(7294),u=t(4378),c=t(1472);function r(){return i.createElement(u.Z,{packageName:"foundation",iconsetModule:c})}}}]);

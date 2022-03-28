@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1962],{4036:function(e,t,c){c.r(t),c.d(t,{default:function(){return s}});var n=c(7294),i=c(4378),u=c(6700);function s(){return n.createElement(i.Z,{packageName:"octicons",iconsetModule:u})}}}]);

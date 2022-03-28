@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[8671],{789:function(e,t,i){i.r(t),i.d(t,{default:function(){return s}});var n=i(7294),c=i(4378),u=i(6902);function s(){return n.createElement(c.Z,{packageName:"themify-icons",iconsetModule:u})}}}]);
