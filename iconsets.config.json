@@ -1,0 +1,225 @@
+[
+  {
+    "packageName": "fontawesome5",
+    "name": "FontAwesome5",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Font Awesome",
+      "url": "https://www.npmjs.com/package/@fortawesome/fontawesome-free"
+    }
+  },
+  {
+    "packageName": "fontawesome5-brands",
+    "name": "FontAwesome5 - Brands",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Font Awesome",
+      "url": "https://www.npmjs.com/package/@fortawesome/fontawesome-free"
+    }
+  },
+  {
+    "packageName": "fluentui-system",
+    "name": "FluentUISystem",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "@fluentui/svg-icons by Microsoft",
+      "url": "https://github.com/microsoft/fluentui-system-icons.git"
+    }
+  },
+  {
+    "packageName": "feather",
+    "name": "Feather",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Feather by Cole Bemis & Contributors",
+      "url": "https://feathericons.com"
+    }
+  },
+  {
+    "packageName": "foundation",
+    "name": "Foundation",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Foundation by ZURB, Inc",
+      "url": "https://zurb.com/playground/foundation-icon-fonts-3"
+    }
+  },
+  {
+    "packageName": "ant-design",
+    "name": "Ant Design Icons",
+    "defaultVariant": "filled",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Ant Design Icons",
+      "url": "https://npmjs.com/package/@ant-design/icons"
+    }
+  },
+  {
+    "packageName": "entypo",
+    "name": "Entypo",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Entypo by Daniel Bruce & Contributors",
+      "url": "https://github.com/geakstr/entypo-icons"
+    }
+  },
+  {
+    "packageName": "ionicons",
+    "name": "Ionicons",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "ionicons by Ionic framework",
+      "url": "https://ionic.io/ionicons"
+    }
+  },
+  {
+    "packageName": "octicons",
+    "name": "Octicons",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Octicons by Primer",
+      "url": "https://primer.style/octicons/"
+    }
+  },
+  {
+    "packageName": "material-community",
+    "name": "Material Community",
+    "version": "0.1.20",
+    "license": "Apache-2.0",
+    "originalAuthor": {
+      "name": "Material Design Icons by community",
+      "url": "https://github.com/google/material-design-icons"
+    }
+  },
+  {
+    "packageName": "material-design",
+    "name": "Material Design Icons",
+    "version": "0.1.20",
+    "license": "Apache-2.0",
+    "originalAuthor": {
+      "name": "Material Design Icons by Google",
+      "url": "https://github.com/google/material-design-icons"
+    }
+  },
+  {
+    "packageName": "bootstrap",
+    "name": "Bootstrap Icons",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Bootstrap Icons",
+      "url": "https://icons.getbootstrap.com/"
+    }
+  },
+  {
+    "packageName": "css-gg",
+    "name": "css.gg",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "css.gg",
+      "url": "https://css.gg/"
+    }
+  },
+  {
+    "packageName": "heroicons",
+    "name": "Heroicons",
+    "defaultVariant": "solid",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Heroicons",
+      "url": "https://npmjs.com/package/heroicons"
+    }
+  },
+  {
+    "packageName": "simple-icons",
+    "name": "Simple Icons",
+    "version": "0.1.20",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Simple Icons",
+      "url": "https://npmjs.com/package/simple-icons"
+    }
+  },
+  {
+    "packageName": "typicons",
+    "name": "Typicons",
+    "version": "0.1.20",
+    "license": "CC-BY-SA",
+    "originalAuthor": {
+      "name": "Typicons",
+      "url": "https://www.s-ings.com/typicons"
+    }
+  },
+  {
+    "packageName": "flag-icons",
+    "name": "Flag Icons",
+    "colorize": false,
+    "version": "0.2.0",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "flag-icons",
+      "url": "https://flagicons.lipis.dev/"
+    }
+  },
+  {
+    "packageName": "fontisto",
+    "name": "Fontisto",
+    "version": "0.2.0",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Fontisto by Kenan Gündoğan",
+      "url": "http://fontisto.com"
+    }
+  },
+  {
+    "packageName": "flat-color-icons",
+    "name": "Flat Color Icons",
+    "version": "0.2.0",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "flat-color-icons",
+      "url": "https://github.com/icons8/flat-color-icons"
+    }
+  },
+  {
+    "packageName": "tabler-icons",
+    "name": "Tabler Icons",
+    "version": "0.2.0",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "tabler-icons",
+      "url": "https://tabler-icons.io/"
+    }
+  },
+  {
+    "packageName": "xnix",
+    "name": "Xnix",
+    "version": "0.2.0",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Akshay Syal",
+      "url": "https://syaluiux.gumroad.com/l/Xnix500"
+    }
+  },
+  {
+    "packageName": "themify-icons",
+    "name": "Themify Icons",
+    "version": "0.2.0",
+    "license": "MIT",
+    "originalAuthor": {
+      "name": "Themify Icons",
+      "url": "https://themify.me/themify-icons"
+    }
+  }
+]

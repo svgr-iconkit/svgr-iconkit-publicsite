@@ -2,6 +2,7 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const path = require("path");
 const dynamicRoute = require("./plugins/dynamic-routes");
+const iconsetConfig = require("./iconsets.config.json")
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -146,10 +147,15 @@ module.exports = {
       {
         routes: [
           {
-            path: "/explorer",
-            exact: false,
+            path: '/explorer',
+            exact: true,
             component: "@apps/icons-explorer",
           },
+          ... iconsetConfig.map( iconset => ({
+            path: `/explorer/${iconset.packageName}`, 
+            exact: true,
+            component: `@apps/icons-explorer/pages/${iconset.packageName}`,
+          }))
         ],
       },
     ],
