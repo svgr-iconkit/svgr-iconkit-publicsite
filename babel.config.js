@@ -1,14 +1,14 @@
 module.exports = {
-  presets: [
+  presets: [[require.resolve("@docusaurus/core/lib/babel/preset")]],
+  plugins: [
     [
-      require.resolve("@docusaurus/core/lib/babel/preset"),
+      "module-resolver",
+      {
+        alias: {
+          "^react-native$": "react-native-web",
+        },
+      },
     ],
+    ["styled-components", { ssr: true }],
   ],
-  "plugins": [
-    ["module-resolver", {
-      "alias": {
-        "^react-native$": "react-native-web"
-      }
-    }]
-  ]
 };

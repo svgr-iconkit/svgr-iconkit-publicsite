@@ -8,7 +8,7 @@ import {
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import Layout from "@theme/Layout";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { SpinnerOverlay } from "../../components/Spinner";
 import Frame from "./components/Frame";
 import DetailExplorer from "./components/DetailExplorer";
@@ -17,11 +17,16 @@ import { useIconset } from "./useIconset";
 
 export default function IconExplorerDetailPage(props) {
   const { packageName, iconsetModule } = props;
+  const [iconsetInfo, setIconsetInfo] = useState();
   const { siteConfig } = useDocusaurusContext();
   const currentIconsetIndex = iconsets.findIndex(
     (iconset) => iconset.packageName === packageName
   );
-  const iconsetInfo = iconsets[currentIconsetIndex];
+  useEffect(() => {
+    setTimeout(() => {
+      setIconsetInfo(iconsets[currentIconsetIndex]);
+    }, 10);
+  }, []);
   return (
     <Layout
       title={
