@@ -1,0 +1,46 @@
+---
+sidebar_position: 4
+---
+
+# react-native-paper
+
+## General use with individual iconkit
+
+You can use react-native-paper's Provider or inline function to rendering icons that you need.
+
+### Example
+
+```jsx title="src/App.js"
+
+import { Text, View, StyleSheet } from 'react-native';
+import FontawesomeIconset, { variants } from "@svgr-iconkit/fontawesome"
+import { Card, Button, Provider, IconButton } from 'react-native-paper';
+
+const paperSetting = {
+  icon: props => <FontawesomeIconset {...props} />,
+}
+
+export default function App() {
+  return (
+    <Provider settings={paperSetting}>
+      <View style={styles.container}>
+        <Text style={styles.paragraph}>
+          react-native-paper with svgr-iconkit
+        </Text>
+        <Card>
+          <Button icon="clone">Copy me</Button>
+          <IconButton
+            icon={(props)=> <variants.regular name="camera" {...props} />}
+            size={20}
+            onPress={() => console.log('Pressed')}
+          />
+        </Card>
+      </View>
+    </Provider>
+  );
+}
+
+```
+
+
+[Demo link on Expo](https://snack.expo.dev/@lemankk/svgr-iconkit-examples---react-native-paper-components)
