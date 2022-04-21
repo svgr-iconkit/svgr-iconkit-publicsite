@@ -2,7 +2,7 @@ import { Container } from "@bootstrap-styled/v4";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import ArrowRight from "@svgr-iconkit/fontawesome5/icons/regular/arrow-alt-circle-right";
+import ArrowRight from "@svgr-iconkit/fontawesome/icons/regular/circle-right";
 import { Icon } from "@svgr-iconkit/core";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
@@ -12,6 +12,7 @@ import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  console.log(siteConfig)
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       
@@ -21,7 +22,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/0.2.0/intro"
+            to="/docs/intro"
           >
             Get Started in 1 mins <Icon content={ArrowRight} size={18} />
           </Link>

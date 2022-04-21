@@ -29,7 +29,7 @@ export default function IconsetPanel({
     packageName,
     originalAuthor,
     license,
-    version,
+    coreVersion = "0.1.20",
     variantNames = [],
     iconNames = [],
   } = iconsetInfo || {};
@@ -67,34 +67,43 @@ export default function IconsetPanel({
 
       <Row>
         {!!originalAuthor && (
-          <Box
-            as={Col}
-            my={1}
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            md={4}
-            lg={6}
-          >
-            <Label>Creator</Label>
-            <Box>
-              <Text
-                as="a"
-                href={originalAuthor.url}
-                data-testid="creator-link"
-                target="_blank"
-                display="flex"
-                alignItems="center"
-              >
-                <Box mr=".25rem" as="span">
-                  {originalAuthor.name}
+          <Col md={4} lg={6}>
+            <Box display="flex" flexDirection="column" justifyContent="center">
+              <Label>Creator</Label>
+              <Box>
+                <Text
+                  as="a"
+                  href={originalAuthor.url}
+                  data-testid="creator-link"
+                  target="_blank"
+                  display="flex"
+                  alignItems="center"
+                >
+                  <Box mr=".25rem" as="span">
+                    {originalAuthor.name}
+                  </Box>
+                  <Icon content={LinkIconContent} size={12} />
+                </Text>
+              </Box>
+              {!!originalAuthor.package && (
+                <Box>
+                  <Text
+                    as="a"
+                    data-testid="package-author-npm-link"
+                    href={`https://npmjs.com/package/${originalAuthor.package}`}
+                    target="_blank" mr=".25rem"
+                   fontSize="12px">
+                      {originalAuthor.package}
+                    </Text>
+                    <Badge fontSize="12px">
+                      {originalAuthor.version}
+                    </Badge>
                 </Box>
-                <Icon content={LinkIconContent} size={12} />
-              </Text>
+              )}
             </Box>
-          </Box>
+          </Col>
         )}
-        <Col md={8} lg={6}>
+        <Col md={7} lg={6}>
           <Row>
             <Box as={Col} md={4} lg={4}>
               <Label>License</Label>
@@ -102,7 +111,7 @@ export default function IconsetPanel({
             </Box>
             <Box as={Col} md={4} lg={4}>
               <Label>Required core version</Label>
-              <Badge>{version}</Badge>
+              <Badge>{coreVersion}</Badge>
             </Box>
             <Box as={Col} md={4} lg={4}>
               <Label>Total icons</Label>

@@ -9,6 +9,7 @@ module.exports = {
   title: "svgr-iconkit",
   tagline: "SVG Iconkit for react web & mobile",
   url: "https://svgr-iconkit.dev",
+  favicon: '/img/favicon.ico',
   baseUrl: "/",
   onBrokenLinks: "warn",
   organizationName: "svgr-iconkit", // Usually your GitHub org/user name.
@@ -20,7 +21,7 @@ module.exports = {
       title: "svgr-iconkit",
       logo: {
         alt: "SVGR IconKit",
-        src: "img/logo.svg",
+        src: "/img/logo.svg",
         href: "/",
         target: "_self",
         width: 32,
@@ -65,7 +66,7 @@ module.exports = {
           items: [
             {
               label: "Intro",
-              to: "/docs/0.2.0/intro",
+              to: "/docs/0.3.0/intro",
             },
             {
               label: "Explorer",
@@ -102,12 +103,11 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            "https://github.com/svgr-iconkit/svgr-iconkit-publicsite/edit/master/",
+            "https://github.com/svgr-iconkit/svgr-iconkit-publicsite/edit/main/",
           lastVersion: "current",
           versions: {
             current: {
-              label: "0.2.0",
-              path: "0.2.0",
+              label: "next",
             },
           },
         },

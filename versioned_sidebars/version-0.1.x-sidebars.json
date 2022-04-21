@@ -3,27 +3,30 @@
     {
       "type": "doc",
       "label": "Intro",
-      "id": "version-0.1.20/intro"
+      "id": "version-0.1.x/intro"
     },
     {
       "type": "category",
       "label": "Core",
-      "items": ["version-0.1.20/core/properties"]
+      "items": ["version-0.1.x/core/properties"]
     },
     {
       "type": "category",
       "label": "Integration",
-      "items": ["version-0.1.20/integration/with-styled-components", "version-0.1.20/integration/with-nativebase"]
+      "items": [
+        "version-0.1.x/integration/with-styled-components",
+        "version-0.1.x/integration/with-nativebase"
+      ]
     },
     {
       "type": "category",
       "label": "Advanced Usage",
-      "items": ["version-0.1.20/advanced-usage/create-owned-iconset"]
+      "items": ["version-0.1.x/advanced-usage/create-owned-iconset"]
     },
     {
       "type": "category",
       "label": "Examples",
-      "items": ["version-0.1.20/examples/expo-explorer"]
+      "items": ["version-0.1.x/examples/expo-explorer"]
     }
   ]
 }

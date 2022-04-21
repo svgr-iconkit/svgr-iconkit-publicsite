@@ -30,13 +30,13 @@ const SideWidget = styled(Box)`
   z-index: 7;
   top: 0;
   transform: translate(0);
-  width: 260px;
+  width: 280px;
 
   transition: transform 0.25s 0s ease-in-out;
   ${({ active = false }) =>
     active &&
     css`
-      transform: translate(-240px, 0);
+      transform: translate(-260px, 0);
     `}
 
   @media screen and (min-width: 1024px) {
@@ -72,6 +72,9 @@ const SideWidgetButton = styled(Box).attrs({ role: "button", tabIndex: 0 })`
   background-color: var(--ifm-navbar-background-color);
   border: 1px solid var(--ifm-navbar-border-color);
   box-shadow: var(--ifm-navbar-shadow);
+  @media screen and (min-width: 1024px) {
+    top: 250px;
+  }
   @media screen and (min-width: 1200px) {
     display: none;
   }
@@ -81,12 +84,15 @@ const SideWidgetBody = styled(Box)`
   top: 100px;
   left: 0;
   background-color: var(--ifm-navbar-background-color);
-  padding: 18px;
+  padding: 8px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border-right: none;
   margin-right: 20px;
   box-shadow: var(--ifm-navbar-shadow);
+  @media screen and (min-width: 1024px) {
+  padding: 18px;
+  }
 
   @media screen and (min-width: 1200px) {
     position: relative;
@@ -109,11 +115,15 @@ export default function ControlPanel({
   onChangeIconColor,
   iconSize,
   onChangeIconSize,
+  iconStrokeWidth,
+  onChangeIconStrokeWidth,
+  iconCustomStroke = true,
+  onChangeIconCustomStroke,
   keyword,
   onChangeKeyword,
   renderingType,
   onChangeRenderingType,
-  colorize = true,
+  meta = {colorize: true, hasStrokeStyle: false}
 }) {
   const [isActive, setIsActive] = useState(false);
   const [isColorPickerOpen, setColorPickerOpen] = useState(false);
@@ -146,7 +156,7 @@ export default function ControlPanel({
               </Col>
             )}
             <Col xs={12}>
-              <FormGroup>
+              <Box as={FormGroup} paddingLeft="10px">
                 <Label>Keyword</Label>
                 <Box my={1}>
                   <InputGroup my={1}>
@@ -159,7 +169,7 @@ export default function ControlPanel({
                     />
                   </InputGroup>
                 </Box>
-              </FormGroup>
+              </Box>
             </Col>
             <Col xs={12}>
               <FormGroup>
@@ -170,7 +180,9 @@ export default function ControlPanel({
                     max={128}
                     width="100%"
                     value={iconSize}
-                    onChange={onChangeIconSize}
+                    onChange={(evt) => {
+                      onChangeIconSize && onChangeIconSize(evt.target.value);
+                    }}
                   />
                   <Text textAlign="center" width="3rem">
                     {iconSize}
@@ -178,14 +190,56 @@ export default function ControlPanel({
                 </Box>
               </FormGroup>
             </Col>
+            {meta.hasStrokeStyle && (<><Col xs={12}>
+              <FormGroup>
+                <Label>
+                  Use Custom Stroke
+                </Label>
+                <ButtonGroup size="sm">
+                  {['Yes', 'No'].map((name) => {
+                    return (
+                      <Button
+                        key={name}
+                        data-testid="iconset-variant-button"
+                        data-variant-name={name}
+                        onClick={() => onChangeIconCustomStroke && onChangeIconCustomStroke(name)}
+                        color={iconCustomStroke === name ? "primary" : "light"}
+                      >
+                        {name}
+                      </Button>
+                    )
+                  })}
+                </ButtonGroup>
+              </FormGroup>
+            </Col>
             <Col xs={12}>
               <FormGroup>
+                <Label>Stroke With</Label>
+                <Box display="flex" my={1} alignItems="center">
+                  <Slider
+                    min={0.1}
+                    max={3}
+                    step={0.01}
+                    width="100%"
+                    value={iconStrokeWidth}
+                    onChange={(evt) => {
+                      onChangeIconStrokeWidth &&
+                        onChangeIconStrokeWidth(evt.target.value);
+                    }}
+                  />
+                  <Text textAlign="center" width="3rem">
+                    {iconStrokeWidth}
+                  </Text>
+                </Box>
+              </FormGroup>
+            </Col>
+            </>)}
+            {meta.colorize && (<Col xs={12}>
+              <FormGroup>
                 <Label>Color</Label>
-                {!colorize && (
-                  <FormText>Not supported for this iconset</FormText>
-                )}
                 <Picker
                   my={1}
+                  
                   isOpen={isColorPickerOpen}
                   onClose={() => setColorPickerOpen(false)}
                   content={
@@ -220,7 +274,7 @@ export default function ControlPanel({
                   </InputGroup>
                 </Picker>
               </FormGroup>
-            </Col>
+            </Col>)}
           </Row>
         </Form>
       </SideWidgetBody>

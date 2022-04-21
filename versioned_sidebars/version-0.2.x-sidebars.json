@@ -1,0 +1,38 @@
+{
+  "tutorialSidebar": [
+    {
+      "type": "doc",
+      "label": "Intro",
+      "id": "version-0.2.x/intro"
+    },
+    {
+      "type": "category",
+      "label": "Core",
+      "items": ["version-0.2.x/core/properties"]
+    },
+    {
+      "type": "category",
+      "label": "Integration",
+      "items": [
+        "version-0.2.x/integration/with-styled-components",
+        "version-0.2.x/integration/with-nativebase"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Advanced Usage",
+      "items": [
+        "version-0.2.x/advanced-usage/create-owned-iconset",
+        "version-0.2.x/advanced-usage/individual-use"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Examples",
+      "items": [
+        "version-0.2.x/examples/expo-example",
+        "version-0.2.x/examples/rating"
+      ]
+    }
+  ]
+}

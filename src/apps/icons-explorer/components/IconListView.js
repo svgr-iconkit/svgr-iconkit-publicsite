@@ -47,6 +47,8 @@ export default function IconListView({
   keyword,
   iconSize,
   iconColor,
+  iconStrokeWidth,
+  iconCustomStroke = true,
   isSearchMode = false,
   renderingType = "styled",
   maxIconsShown = 40,
@@ -66,6 +68,7 @@ export default function IconListView({
   const iconProps = {};
   iconProps.size = iconSize;
   iconProps.color = iconColor;
+  iconProps.strokeWidth = iconCustomStroke && iconStrokeWidth
   return (
     <IconWrapper {...styledProps}>
       <Grid py={3} my={2}>

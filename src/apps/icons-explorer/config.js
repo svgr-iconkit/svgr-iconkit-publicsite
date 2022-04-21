@@ -11,7 +11,7 @@ export const sortedPackageNames = iconsets
   .map((item) => ({
     packageName: item.packageName,
     name: item.name,
-    colorize: item.colorize,
+    meta: item.meta,
   }))
   .sort((a, b) => {
     return String(a.name).localeCompare(b.name);

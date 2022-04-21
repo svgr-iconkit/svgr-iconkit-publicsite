@@ -32,10 +32,18 @@ export default memo(function DetailExplorer(props) {
   const storageSize = _win.localStorage.getItem("ExplorerSize");
   const storageColor = _win.localStorage.getItem("ExplorerColor");
   const storageKeyword = _win.localStorage.getItem("ExplorerKeyword");
+  const storageStrokeWidth = _win.localStorage.getItem("ExplorerStrokeWidth");
+  const storageCustomStroke = _win.localStorage.getItem("ExplorerCustomStroke");
 
   const [keyword, setKeyword] = useState(storageKeyword || "");
   const [iconSize, setIconSize] = useState(
     storageSize ? Number(storageSize) : 24
+  );
+  const [iconStrokeWidth, setIconStrokeWidth] = useState(
+    storageStrokeWidth && Number(storageStrokeWidth) || 2
+  );
+  const [iconCustomStroke, setIconCustomStroke] = useState(
+    storageCustomStroke && storageCustomStroke || 'Yes'
   );
   const [iconColor, setIconColor] = useState(storageColor || "#0693E3");
   const [renderingType, setRenderingType] = useState("styled");
@@ -45,10 +53,6 @@ export default memo(function DetailExplorer(props) {
   );
 
   const [isColorPickerOpen, setColorPickerOpen] = useState(false);
-  const onChangeSize = useCallback(
-    (event) => setIconSize(event.target.value),
-    []
-  );
   const onShowMore = () => setMaxIconsShown(maxIconsShown + pageSize);
   const { iconNames = [], colorize = true } = iconsetInfo || {};
 
@@ -63,7 +67,9 @@ export default memo(function DetailExplorer(props) {
     _win.localStorage.setItem("ExplorerSize", iconSize);
     _win.localStorage.setItem("ExplorerColor", iconColor);
     _win.localStorage.setItem("ExplorerKeyword", keyword);
-  }, [iconSize, iconColor, keyword]);
+    _win.localStorage.setItem("ExplorerStrokeWidth", iconStrokeWidth);
+    _win.localStorage.setItem("ExplorerCustomStroke", iconCustomStroke);
+  }, [iconSize, iconColor, keyword, iconStrokeWidth, iconCustomStroke]);
 
   return (
     <>
@@ -91,6 +97,8 @@ export default memo(function DetailExplorer(props) {
                 keyword={keyword}
                 iconSize={iconSize}
                 iconColor={iconColor}
+                iconStrokeWidth={iconStrokeWidth}
+                iconCustomStroke={iconCustomStroke === 'Yes'}
                 iconsetInfo={iconsetInfo}
                 renderingType={renderingType}
                 matchedIconNames={matchedIconNames}
@@ -104,13 +112,18 @@ export default memo(function DetailExplorer(props) {
         <Box as={Col} zIndex={2} xs={12} xl={3}>
           <ControlPanel
             variantNames={iconsetInfo?.variantNames}
+            meta={iconsetInfo?.meta}
             currentVariant={currentVariant}
             onChangeVariant={setVariant}
             colorize={colorize}
             iconColor={iconColor}
             onChangeIconColor={setIconColor}
+            iconStrokeWidth={iconStrokeWidth}
+            onChangeIconStrokeWidth={setIconStrokeWidth}
+            iconCustomStroke={iconCustomStroke}
+            onChangeIconCustomStroke={setIconCustomStroke}
             iconSize={iconSize}
-            onChangeIconSize={onChangeSize}
+            onChangeIconSize={setIconSize}
             keyword={keyword}
             onChangeKeyword={(keyword) => {
               setKeyword(keyword);

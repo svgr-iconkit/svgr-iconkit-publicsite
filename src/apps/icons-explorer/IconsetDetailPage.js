@@ -16,7 +16,7 @@ import { iconsets, pageSize, pathPrefix, sortedPackageNames } from "./config";
 import { useIconset } from "./useIconset";
 
 export default function IconExplorerDetailPage(props) {
-  const { packageName, iconsetModule } = props;
+  const { packageName, iconsetModule, meta } = props;
   const [iconsetInfo, setIconsetInfo] = useState();
   const { siteConfig } = useDocusaurusContext();
   const currentIconsetIndex = iconsets.findIndex(
