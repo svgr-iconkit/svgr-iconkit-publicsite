@@ -70,11 +70,11 @@ export default function App() {
 }
 ```
 
-#### Using with react-native-web
+#### For react-native-web
 
-Due to limitation of webpack resolving used in ```react-native-web```, it's suggested to use "/native" from package or adding ".web.js" when resolving files in webpack configuration. 
+If your project is going to share between web and mobile. It's suggested to use ```PackageName```/native for import. It make sure styling is functional from both side.
 
-Example 1:
+Example:
 
 ```javascript
 import { View } from "react-native";
@@ -86,7 +86,3 @@ export default function App() {
   </View>
 }
 ```
-
-Example 2:
-
-See sample of webpack config https://github.com/svgr-iconkit/svgr-iconkit/blob/main/examples/expo-explorer/webpack.config.js

@@ -32,7 +32,7 @@ If you import ```Icon``` component from ```@svgr-iconkit/core```, it will provid
 
 | Name | Type | Requird | Version | Description |
 | --- | --- | --- | --- | --- |
-| content | ```IconSVG``` \| ```Record<string, IconSVG>``` | No | 0.1.20 | The dataset for rendering SVG Icon by other definition. | 
+| content | ```IconSVG``` \| ```Record<string, IconSVG>``` | No | 0.1.20 | The dataset for rendering SVG Icon by custom iconset. | 
 
 ## Svg content
 
