@@ -18,6 +18,12 @@ const IconWrapper = styled.div`
         width: ${iconSize}px;
         height: ${iconSize}px;
       `}
+
+      ${({ iconStrokeWidth }) =>
+      !!iconStrokeWidth &&
+      css`
+        stroke-width: ${iconStrokeWidth}px;
+      `}
   }
 `;
 
@@ -66,9 +72,9 @@ export default function IconListView({
 
   const styledProps = {};
   const iconProps = {};
-  iconProps.size = iconSize;
-  iconProps.color = iconColor;
-  iconProps.strokeWidth = iconCustomStroke && iconStrokeWidth
+  styledProps.iconSize = iconSize;
+  styledProps.iconColor = iconColor;
+  styledProps.iconStrokeWidth = iconCustomStroke && iconStrokeWidth
   return (
     <IconWrapper {...styledProps}>
       <Grid py={3} my={2}>

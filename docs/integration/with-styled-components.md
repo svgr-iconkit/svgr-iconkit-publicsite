@@ -9,7 +9,7 @@ sidebar_position: 2
 You are able to use the styled-components's api to provide css definition to the icons.
 
 ```jsx title="src/components/Icon.js"
-import FontawesomeIcon from "@svgr-iconkit/fontawesome5";
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
 import styled from "styled-components";
 
 export default styled(FontawesomeIcon)`

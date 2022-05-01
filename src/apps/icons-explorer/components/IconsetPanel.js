@@ -10,7 +10,7 @@ import {
   Row,
 } from "@bootstrap-styled/v4";
 import { Icon } from "@svgr-iconkit/core";
-import IconNpm from "@svgr-iconkit/fontawesome5-brands/icons/regular/npm";
+import IconNpm from "@svgr-iconkit/fontawesome-brands/icons/regular/npm";
 import LinkIconContent from "@svgr-iconkit/heroicons/icons/outline/link";
 import React, { useState } from "react";
 import { Box } from "../../../components/Box";

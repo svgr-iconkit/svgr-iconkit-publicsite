@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## IconsetBaseProps
 
-For all iconset, it's rendering as ```Component<IconsetBaseProps>```. 
+For all iconset, it's extending from ```Component<IconBaseProps>``` and inherit from ```SVGAttributes<SVGSVGElement>``` for react or ```SVGProps``` for react-native provided by react-native-svg. 
 
 | Name | Type | Requird | Version | Description |
 | --- | --- | --- | --- | --- |
@@ -17,14 +17,7 @@ For all iconset, it's rendering as ```Component<IconsetBaseProps>```.
 | size | ```string``` \| ```number``` | No | 0.1.20 | The sizing of the icon. |
 | fontSize | ```string``` \| ```number``` | No | 0.1.20 | The sizing of the icon. If ```fontSize``` give, it will override ```size``` values. | 
 | content | ```IconVariant``` \| ```IconSVG``` | No | 0.2.0 | The stroke size of the icon. |
-| stroke | ```string``` | No | 0.2.0 | The stroke color of the icon. Default apply from color. |
-| strokeWidth | ```string``` \| ```number``` | No | 0.3.0 | The stroke size of the icon. Same usage of [stroke-width](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width)  |
-| strokeLinecap | ```"butt"``` \| ```"round"``` \| ```"square"``` \| ```"inherit"``` | No | 0.3.0 | Same usage of [stroke-linecap](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap) |
-| strokeLinejoin | ```"miter"``` \| ```"round"``` \| ```"bevel"``` \| ```"inherit"``` | No | 0.3.0 | Same usage of [stroke-linejoin](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin) |
-| strokeOpacity | ```number``` \| ```string``` | No | 0.3.0 | Same usage of [stroke-opacity](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-opacity) |
-| strokeMiterlimit | ```number``` \| ```string``` | No | 0.3.0 | Same usage of [stroke-miterlimit](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-miterlimit) |
-| strokeDasharray | ```number``` \| ```string``` | No | 0.3.0 | Same usage of [stroke-dasharray](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray) |
-| strokeDashoffset | ```number``` \| ```string``` | No | 0.3.0 | Same usage of [stroke-dashoffset](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset) |
+
 
 ## Icon component
 
