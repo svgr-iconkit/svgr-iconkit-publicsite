@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[4244],{1921:function(e,t,n){n.r(t),n.d(t,{default:function(){return s}});var c=n(7294),i=n(4378),u=n(9975);function s(){return c.createElement(i.Z,{packageName:"typicons",iconsetModule:u})}}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1690],{23:function(e,t,i){i.r(t),i.d(t,{default:function(){return r}});var n=i(7294),c=i(4378),u=i(324);function r(){return n.createElement(c.Z,{packageName:"material-design",iconsetModule:u})}}}]);

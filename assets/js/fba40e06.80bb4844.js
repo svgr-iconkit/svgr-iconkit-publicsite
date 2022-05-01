@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1399],{2747:function(e,t,n){n.r(t),n.d(t,{default:function(){return s}});var u=n(7294),i=n(4378),c=n(3979);function s(){return u.createElement(i.Z,{packageName:"fluentui-system",iconsetModule:c})}}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[3564],{5547:function(e,t,n){n.r(t),n.d(t,{default:function(){return r}});var c=n(7294),i=n(4378),u=n(9981);function r(){return c.createElement(i.Z,{packageName:"tabler-icons",iconsetModule:u})}}}]);
