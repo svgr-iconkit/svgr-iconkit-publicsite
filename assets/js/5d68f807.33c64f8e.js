@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[5662],{5028:function(i){i.exports=JSON.parse('{"name":"plugin-dynamic-routes","id":"default"}')}}]);
