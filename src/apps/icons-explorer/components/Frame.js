@@ -44,7 +44,7 @@ const SidedMenu = styled(Box)`
   width: 280px;
   position: fixed;
   top: 0;
-  padding-top: var(--ifm-navbar-height);
+    padding-top: 0;
   height: 100vh;
   z-index: 10;
   transform: translate(-280px, 0);
@@ -58,7 +58,6 @@ const SidedMenu = styled(Box)`
   @media screen and (min-width: 1024px) {
     background: transparent;
     width: var(--doc-sidebar-width);
-    padding-top: 0;
     position: sticky;
     height: 100%;
     z-index: 0;
