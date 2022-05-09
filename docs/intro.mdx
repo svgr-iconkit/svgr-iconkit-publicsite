@@ -86,7 +86,7 @@ And this is how it looks <FontawesomeIcon name="heart" color="red" size={24} />
 
 From 0.3.x, it's extending full set of properties from react-native via ```react-native-web```. It's suggested to define "custom.d.ts" in typescript or use "/native" entry to conform the typescript defintion. It make sure your styling properties converted as expected.
 
-##### Define custom.d.ts
+##### Define configuration
 
 ```typescript  title="custom.d.ts"
 // In custom.d.ts
@@ -94,6 +94,19 @@ declare module "@svgr-iconkit/core" {
   export * from "@svgr-iconkit/core/native"
   export { default } from "@svgr-iconkit/core/native"
 }
+```
+
+```javascript title="webpack.config.js"
+const createExpoWebpackConfigAsync = require("@expo/webpack-config");
+
+// Expo CLI will await this method so you can optionally return a promise.
+module.exports = async function (env, argv) {
+  const config = await createExpoWebpackConfigAsync(env, argv);
+  // Resolving "react-native" module first.
+  config.resolve.mainFields = ['react-native', 'browser', 'module', 'main']
+  // Finally return the new config for the CLI to use.
+  return config;
+};
 
 ```
 
