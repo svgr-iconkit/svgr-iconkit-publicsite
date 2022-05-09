@@ -80,9 +80,13 @@ And this is how it looks <FontawesomeIcon name="heart" color="red" size={24} />
 
 ### React Native or Expo
 
-From 0.3.x, it's extending react-native properties for supporting complete set of props from native. It suggested to define "custom.d.ts" in typescript or use "/native" entry to conform the typescript defintion.
+<iframe src="https://snack.expo.dev/embedded/@lemankk/svgr-iconkit---native-example?iframeId=dejknqom2f&amp;preview=true&amp;platform=android&amp;theme=light" height="100%" width="100%" frameborder="0" data-snack-iframe="true" style="display: block;"></iframe>
 
-#### Define custom.d.ts
+#### Using react-native for website
+
+From 0.3.x, it's extending full set of properties from react-native via ```react-native-web```. It's suggested to define "custom.d.ts" in typescript or use "/native" entry to conform the typescript defintion. It make sure your styling properties converted as expected.
+
+##### Define custom.d.ts
 
 ```typescript  title="custom.d.ts"
 // In custom.d.ts
@@ -106,7 +110,7 @@ export default function App() {
 ```
 
 
-#### Use /native entry
+##### Use /native entry
 
 ```tsx title="src/App.tsx"
 import { View } from "react-native";
