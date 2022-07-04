@@ -107,7 +107,7 @@ module.exports = {
           lastVersion: "current",
           versions: {
             current: {
-              label: "next",
+              label: "0.3.x",
             },
           },
         },

@@ -2,7 +2,7 @@
   {
     "packageName": "fontawesome5",
     "name": "FontAwesome5 Free",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -50,7 +50,7 @@
   {
     "packageName": "fluentui-system",
     "name": "Fluent UI System Icons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -59,14 +59,14 @@
     "originalAuthor": {
       "name": "Microsoft",
       "package": "@fluentui/svg-icons",
-      "version": "4.29.0",
+      "version": "1.1.175",
       "url": "https://github.com/microsoft/fluentui-system-icons.git"
     }
   },
   {
     "packageName": "feather",
     "name": "Feather",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -82,7 +82,7 @@
   {
     "packageName": "foundation",
     "name": "Foundation",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -96,7 +96,7 @@
   {
     "packageName": "ant-design",
     "name": "Ant Design Icons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "defaultVariant": "filled",
@@ -113,7 +113,7 @@
   {
     "packageName": "entypo",
     "name": "Entypo",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -129,7 +129,7 @@
   {
     "packageName": "ionicons",
     "name": "Ionicons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -138,14 +138,14 @@
     "originalAuthor": {
       "name": "ionicons by Ionic framework",
       "package": "ionicons",
-      "version": "6.0.1",
+      "version": "6.0.2",
       "url": "https://ionic.io/ionicons"
     }
   },
   {
     "packageName": "octicons",
     "name": "Octicons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -154,14 +154,14 @@
     "originalAuthor": {
       "name": "Primer",
       "package": "@primer/octicons",
-      "version": "17.0.0",
+      "version": "17.3.0",
       "url": "https://primer.style/octicons/"
     }
   },
   {
     "packageName": "material-community",
     "name": "Material Design Community",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "Apache-2.0",
     "meta": {
       "colorize": true,
@@ -169,7 +169,7 @@
     },
     "originalAuthor": {
       "name": "materialdesignicons.com",
-      "version": "6.6.96",
+      "version": "6.9.96",
       "package": "@mdi/svg",
       "url": "https://materialdesignicons.com/"
     }
@@ -177,7 +177,7 @@
   {
     "packageName": "material-design",
     "name": "Material Design Icons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "Apache-2.0",
     "meta": {
       "colorize": true,
@@ -193,7 +193,7 @@
   {
     "packageName": "bootstrap",
     "name": "Bootstrap Icons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -202,14 +202,14 @@
     "originalAuthor": {
       "name": "Bootstrap Icons",
       "package": "bootstrap-icons",
-      "version": "1.8.1",
+      "version": "1.8.3",
       "url": "https://icons.getbootstrap.com/"
     }
   },
   {
     "packageName": "css-gg",
     "name": "css.gg",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "colorize": true,
@@ -225,7 +225,7 @@
   {
     "packageName": "heroicons",
     "name": "heroicons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "MIT",
     "meta": {
       "defaultVariant": "solid",
@@ -242,7 +242,7 @@
   {
     "packageName": "simple-icons",
     "name": "Simple Icons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "CC0-1.0",
     "meta": {
       "colorize": true,
@@ -258,7 +258,7 @@
   {
     "packageName": "typicons",
     "name": "Typicons",
-    "coreVersion": "0.1.20",
+    "coreVersion": "0.2.0",
     "license": "CC-BY-SA",
     "meta": {
       "colorize": true,
@@ -274,7 +274,7 @@
   {
     "packageName": "flag-icons",
     "name": "Flag Icons",
-    "coreVersion": "0.2.0",
+    "coreVersion": "0.3.0",
     "license": "MIT",
     "meta": {
       "colorize": false,
@@ -283,7 +283,7 @@
     "originalAuthor": {
       "name": "flag-icons",
       "package": "flag-icons",
-      "version": "6.1.1",
+      "version": "6.6.2",
       "url": "https://flagicons.lipis.dev/"
     }
   },
@@ -329,7 +329,7 @@
     "originalAuthor": {
       "name": "tabler-icons",
       "package": "@tabler/icons",
-      "version": "1.64.0",
+      "version": "1.72.0",
       "url": "https://tabler-icons.io/"
     }
   },

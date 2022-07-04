@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { Box, Flex } from "../../../components/Box";
 import { ErrorBoundary } from "../../../components/ErrorBoundary";
 import Text from "../../../components/Text";
+import BackgroundImage from '../../../../static/img/explorer-bg.png'
 
 const IconWrapper = styled.div`
   svg {
@@ -44,6 +45,7 @@ const IconItem = styled(Box).attrs({ tabIndex: 0, role: "button" })`
   padding: 5px;
   display: flex;
   flex-direction: column;
+  border: thin solid #ececec;
 `;
 
 export default function IconListView({
@@ -87,6 +89,7 @@ export default function IconListView({
                 minHeight={Number(iconSize) + 10}
                 justifyContent="center"
                 alignItems="center"
+                backgroundImage={`url(${BackgroundImage})`}
               >
                 {IconComponent && (
                   <IconComponent
