@@ -46,8 +46,10 @@
     "@svgr-iconkit/material-community": "^0.3.1",
     "@svgr-iconkit/material-design": "^0.3.1",
     "@svgr-iconkit/octicons": "^0.3.1",
+    "@svgr-iconkit/primeicons": "^0.3.2",
+    "@svgr-iconkit/remixicon": "^0.3.2",
     "@svgr-iconkit/simple-icons": "^0.3.1",
-    "@svgr-iconkit/simple-line-icons": "^0.3.1",
+    "@svgr-iconkit/simple-line-icons": "^0.3.2",
     "@svgr-iconkit/tabler-icons": "^0.3.1",
     "@svgr-iconkit/themify-icons": "^0.3.1",
     "@svgr-iconkit/typicons": "^0.3.1",
@@ -70,7 +72,7 @@
   },
   "resolutions": {
     "react": "^17.0.1",
-    "@svgr-iconkit/core": "^0.3.2-beta.2"
+    "@svgr-iconkit/core": "^0.3.2"
   },
   "browserslist": {
     "production": [
