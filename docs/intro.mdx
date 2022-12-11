@@ -5,6 +5,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ExpoSnackPreview from '../src/components/ExpoSnackPreview';
 import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+import CodesandboxPreview from '../src/components/CodesandboxPreview';
 
 
 # Intro
@@ -68,16 +69,10 @@ Import icon from your project
 
 ### React.js for Web
 
-```tsx title="src/App.tsx"
-import FontawesomeIcon from "@svgr-iconkit/fontawesome";
 
-export default function App() {
-  return <div>
-    <FontawesomeIcon name="heart" color="red" size={24} onClick={(evt: MouseEvent<SVGSVGElement>) => { /** Do something **/ }} />
-  </div>
-}
-```
-And this is how it looks <FontawesomeIcon name="heart" color="red" size={24} />
+<CodesandboxPreview path="svgr-iconkit-simple-web-z43xm9"/>
+
+
 
 ### React Native or Expo
 
