@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[6353],{8137:(e,c,i)=>{i.r(c),i.d(c,{default:()=>u});var t=i(7294),s=i(8258),n=i(3561);function u(){return t.createElement(s.Z,{packageName:"flag-icons",iconsetModule:n})}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[4828],{156:(e,i,c)=>{c.r(i),c.d(i,{default:()=>u});var s=c(7294),t=c(8258),n=c(9285);function u(){return s.createElement(t.Z,{packageName:"simple-line-icons",iconsetModule:n})}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1369],{2441:(e,t,c)=>{c.r(t),c.d(t,{default:()=>a});var i=c(7294),s=c(8258),u=c(3538);function a(){return i.createElement(s.Z,{packageName:"bootstrap",iconsetModule:u})}}}]);

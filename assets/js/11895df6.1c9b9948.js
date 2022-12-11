@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1078],{8914:(e,i,c)=>{c.r(i),c.d(i,{default:()=>u});var t=c(7294),n=c(8258),s=c(808);function u(){return t.createElement(n.Z,{packageName:"remixicon",iconsetModule:s})}}}]);
