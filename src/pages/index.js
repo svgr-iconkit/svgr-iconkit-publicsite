@@ -1,4 +1,4 @@
-import { Container } from "@bootstrap-styled/v4";
+import { Container, Img } from "@bootstrap-styled/v4";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -17,8 +17,12 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       
       <Container>
-        <img width="280" src={useBaseUrl('/img/logo.svg')} alt={siteConfig.title} />
+        <Img width="280" src={useBaseUrl('/img/logo.svg')} alt={siteConfig.title} />
         <p className={clsx("hero__subtitle", styles.heroBannerSubtitle)}>{siteConfig.tagline}</p>
+        <p><a             data-testid="package-npm-link"
+            href={`https://npmjs.com/package/@svgr-iconkit/core`} target="_blank">
+          <Img src={`https://img.shields.io/npm/dm/@svgr-iconkit/core?logo=npm&label=@svgr-iconkit/core`} />
+          </a></p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

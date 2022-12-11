@@ -374,5 +374,37 @@
       "name": "Weather Icons",
       "url": "https://erikflowers.github.io/weather-icons"
     }
+  },
+  {
+    "packageName": "simple-line-icons",
+    "name": "Simple Line Icons",
+    "coreVersion": "0.3.0",
+    "license": "MIT",
+    "meta": {
+      "colorize": true,
+      "hasStrokeStyle": false
+    },
+    "originalAuthor": {
+      "name": "Simple Line Icons",
+      "package": "simple-line-icons",
+      "version": "2.5.5",
+      "url": "https://simplelineicons.github.io/"
+    }
+  },
+  {
+    "packageName": "evil-icons",
+    "name": "Evil Icons",
+    "coreVersion": "0.3.2",
+    "license": "MIT",
+    "meta": {
+      "colorize": true,
+      "hasStrokeStyle": false
+    },
+    "originalAuthor": {
+      "name": "Evil Icons",
+      "package": "evil-icons",
+      "version": "1.10.1",
+      "url": "https://evil-icons.io/"
+    }
   }
 ]

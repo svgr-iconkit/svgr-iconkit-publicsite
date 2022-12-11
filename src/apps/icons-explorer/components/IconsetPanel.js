@@ -8,6 +8,7 @@ import {
   CardTitle,
   Col,
   Row,
+  Img,
 } from "@bootstrap-styled/v4";
 import { Icon } from "@svgr-iconkit/core";
 import IconNpm from "@svgr-iconkit/fontawesome-brands/icons/regular/npm";
@@ -15,6 +16,7 @@ import LinkIconContent from "@svgr-iconkit/heroicons/icons/outline/link";
 import React, { useState } from "react";
 import { Box } from "../../../components/Box";
 import Label from "../../../components/Label";
+import LinkButton from "../../../components/LinkButton";
 import { Text } from "../../../components/Text";
 import { iconsetWithScope } from "../utils";
 export default function IconsetPanel({
@@ -46,22 +48,16 @@ export default function IconsetPanel({
     return null;
   }
 
+  const packageNameWithScope = iconsetWithScope(packageName);
   return (
     <Box m={2}>
       <Box>
         <CardTitle>{familyName}</CardTitle>
         <Box my={1} display="flex" alignItems="center">
-          <Icon content={IconNpm} color="red" size={24} />
-          <Text
-            as="a"
-            data-testid="package-npm-link"
-            href={`https://npmjs.com/package/${iconsetWithScope(packageName)}`}
-            target="_blank"
-            ml=".5rem"
-            fontSize="12px"
-          >
-            {iconsetWithScope(packageName)}
-          </Text>
+          <a             data-testid="package-npm-link"
+            href={`https://npmjs.com/package/${packageNameWithScope}`} target="_blank">
+          <Img src={`https://img.shields.io/npm/dm/${packageNameWithScope}?logo=npm&label=${packageNameWithScope}`} />
+          </a>
         </Box>
       </Box>
 
