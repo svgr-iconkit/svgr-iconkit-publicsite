@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[8928],{7886:(e,c,i)=>{i.r(c),i.d(c,{default:()=>u});var t=i(7294),s=i(8258),n=i(6831);function u(){return t.createElement(s.Z,{packageName:"heroicons",iconsetModule:n})}}}]);

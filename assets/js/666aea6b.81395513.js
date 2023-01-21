@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[2307],{292:(e,t,i)=>{i.r(t),i.d(t,{default:()=>n});var c=i(7294),u=i(7234),a=i(970);function n(){return c.createElement(u.Z,{packageName:"material-community",iconsetModule:a})}}}]);

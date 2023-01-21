@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[77],{8544:(e,i,t)=>{t.r(i),t.d(i,{default:()=>u});var c=t(7294),n=t(7234),s=t(2416);function u(){return c.createElement(n.Z,{packageName:"xnix",iconsetModule:s})}}}]);

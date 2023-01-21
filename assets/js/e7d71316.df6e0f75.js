@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[2717],{4126:(e,t,c)=>{c.r(t),c.d(t,{default:()=>u});var i=c(7294),n=c(8258),s=c(6319);function u(){return i.createElement(n.Z,{packageName:"entypo",iconsetModule:s})}}}]);

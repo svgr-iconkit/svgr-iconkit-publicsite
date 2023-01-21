@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[8707],{4991:(e,c,s)=>{s.r(c),s.d(c,{default:()=>n});var t=s(7294),i=s(8258),u=s(9862);function n(){return t.createElement(i.Z,{packageName:"css-gg",iconsetModule:u})}}}]);

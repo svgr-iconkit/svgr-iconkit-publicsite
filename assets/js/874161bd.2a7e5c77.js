@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[4779],{5175:(e,t,c)=>{c.r(t),c.d(t,{default:()=>u});var i=c(7294),s=c(7234),n=c(2694);function u(){return i.createElement(s.Z,{packageName:"fontawesome5",iconsetModule:n})}}}]);

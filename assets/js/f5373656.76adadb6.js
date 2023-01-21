@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[5497],{9664:(e,t,s)=>{s.r(t),s.d(t,{default:()=>a});var c=s(7294),i=s(7234),n=s(7678);function a(){return c.createElement(i.Z,{packageName:"fontawesome-brands",iconsetModule:n})}}}]);

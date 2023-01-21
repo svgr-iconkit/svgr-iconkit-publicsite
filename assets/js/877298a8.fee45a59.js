@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[2766],{9565:(e,t,i)=>{i.r(t),i.d(t,{default:()=>u});var c=i(7294),n=i(8258),s=i(9797);function u(){return c.createElement(n.Z,{packageName:"ant-design",iconsetModule:s})}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[7754],{542:(e,t,i)=>{i.r(t),i.d(t,{default:()=>u});var c=i(7294),s=i(7234),n=i(9011);function u(){return c.createElement(s.Z,{packageName:"fontisto",iconsetModule:n})}}}]);
