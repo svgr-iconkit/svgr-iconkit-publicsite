@@ -56,8 +56,8 @@ export default function IconsetPanel({
         <Box my={1} display="flex" alignItems="center">
           <a data-testid="package-npm-link"
             href={`https://npmjs.com/package/${packageNameWithScope}`} title="Open in npmjs.com" target="_blank">
-              <Img src={`https://img.shields.io/npm/v/${packageNameWithScope}?label=${packageNameWithScope}`} alt={`Latest version of ${packageNameWithScope}`} />
-              <Img src={`https://img.shields.io/npm/dm/${packageNameWithScope}?logo=npm&label=`} alt="" />
+              <Img src={`https://img.shields.io/npm/v/${packageNameWithScope}?label=${packageNameWithScope}&style=flat-square`} alt={`Latest version of ${packageNameWithScope}`} />{` `}
+              <Img src={`https://img.shields.io/npm/dm/${packageNameWithScope}?logo=npm&label=&style=flat-square`} alt="" />
           </a>
         </Box>
       </Box>
