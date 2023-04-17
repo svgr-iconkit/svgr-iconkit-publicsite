@@ -27,7 +27,7 @@
     "originalAuthor": {
       "name": "Font Awesome",
       "package": "@fortawesome/fontawesome-free",
-      "version": "6.0.0",
+      "version": "6.4.0",
       "url": "https://www.npmjs.com/package/@fortawesome/fontawesome-free"
     }
   },
@@ -43,7 +43,7 @@
     "originalAuthor": {
       "name": "Font Awesome",
       "package": "@fortawesome/fontawesome-free",
-      "version": "6.0.0",
+      "version": "6.4.0",
       "url": "https://www.npmjs.com/package/@fortawesome/fontawesome-free"
     }
   },
@@ -59,7 +59,7 @@
     "originalAuthor": {
       "name": "Microsoft",
       "package": "@fluentui/svg-icons",
-      "version": "1.1.175",
+      "version": "1.1.198",
       "url": "https://github.com/microsoft/fluentui-system-icons.git"
     }
   },
@@ -138,7 +138,7 @@
     "originalAuthor": {
       "name": "ionicons by Ionic framework",
       "package": "ionicons",
-      "version": "6.0.2",
+      "version": "7.1.0",
       "url": "https://ionic.io/ionicons"
     }
   },
@@ -154,7 +154,7 @@
     "originalAuthor": {
       "name": "Primer",
       "package": "@primer/octicons",
-      "version": "17.3.0",
+      "version": "18.3.0",
       "url": "https://primer.style/octicons/"
     }
   },
@@ -169,7 +169,7 @@
     },
     "originalAuthor": {
       "name": "materialdesignicons.com",
-      "version": "6.9.96",
+      "version": "7.2.96",
       "package": "@mdi/svg",
       "url": "https://materialdesignicons.com/"
     }
@@ -202,7 +202,7 @@
     "originalAuthor": {
       "name": "Bootstrap Icons",
       "package": "bootstrap-icons",
-      "version": "1.8.3",
+      "version": "1.10.4",
       "url": "https://icons.getbootstrap.com/"
     }
   },
@@ -235,7 +235,7 @@
     "originalAuthor": {
       "name": "heroicons",
       "package": "heroicons",
-      "version": "1.0.6",
+      "version": "2.0.17",
       "url": "https://npmjs.com/package/heroicons"
     }
   },
@@ -283,7 +283,7 @@
     "originalAuthor": {
       "name": "flag-icons",
       "package": "flag-icons",
-      "version": "6.6.2",
+      "version": "6.6.6",
       "url": "https://flagicons.lipis.dev/"
     }
   },
@@ -419,7 +419,7 @@
     "originalAuthor": {
       "name": "Remix Icons",
       "package": "remixicon",
-      "version": "2.5.0",
+      "version": "3.2.0",
       "url": "https://remixicon.com/"
     }
   },

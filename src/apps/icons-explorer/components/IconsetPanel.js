@@ -54,9 +54,10 @@ export default function IconsetPanel({
       <Box>
         <CardTitle>{familyName}</CardTitle>
         <Box my={1} display="flex" alignItems="center">
-          <a             data-testid="package-npm-link"
-            href={`https://npmjs.com/package/${packageNameWithScope}`} target="_blank">
-          <Img src={`https://img.shields.io/npm/dm/${packageNameWithScope}?logo=npm&label=${packageNameWithScope}`} />
+          <a data-testid="package-npm-link"
+            href={`https://npmjs.com/package/${packageNameWithScope}`} title="Open in npmjs.com" target="_blank">
+              <Img src={`https://img.shields.io/npm/v/${packageNameWithScope}?label=${packageNameWithScope}`} alt={`Latest version of ${packageNameWithScope}`} />
+              <Img src={`https://img.shields.io/npm/dm/${packageNameWithScope}?logo=npm&label=`} alt="" />
           </a>
         </Box>
       </Box>
