@@ -21,7 +21,7 @@ function HomepageHeader() {
         <p className={clsx("hero__subtitle", styles.heroBannerSubtitle)}>{siteConfig.tagline}</p>
         <p><a             data-testid="package-npm-link"
             href={`https://npmjs.com/package/@svgr-iconkit/core`} target="_blank">
-          <Img src={`https://img.shields.io/npm/dm/@svgr-iconkit/core?logo=npm&label=@svgr-iconkit/core`} />
+          <Img src={`https://img.shields.io/npm/dm/@svgr-iconkit/core?logo=npm&label=@svgr-iconkit/core&style=flat-square`} alt="Check on npmjs.com" />
           </a></p>
         <div className={styles.buttons}>
           <Link
