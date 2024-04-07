@@ -66,7 +66,7 @@ module.exports = {
           items: [
             {
               label: "Intro",
-              to: "/docs/0.3.0/intro",
+              to: "/docs/0.4.0/intro",
             },
             {
               label: "Explorer",
@@ -107,7 +107,7 @@ module.exports = {
           lastVersion: "current",
           versions: {
             current: {
-              label: "0.3.x",
+              label: "0.4.x",
             },
           },
         },

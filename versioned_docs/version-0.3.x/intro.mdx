@@ -1,0 +1,133 @@
+---
+sidebar_position: 1
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ExpoSnackPreview from '../../src/components/ExpoSnackPreview';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+import CodesandboxPreview from '../../src/components/CodesandboxPreview';
+
+
+# Intro
+
+
+
+Inspired by [gregberge/svgr](https://github.com/gregberge/svgr) and [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), the kit set used to rendering SVG formatted icon content directly and supporting different framework/ platform on Next.js React.js, React-Native and Expo.
+
+It provide below benefits:
+- Standardize same set of icons.
+- Easy to integrate with styled-components or css based framework (for web only).
+- All svg content exported as pure JS data easier to be reuse in other platform and/or in-app updates solution like CodePush in react native.
+
+
+
+## Install packages
+
+Install package in your react.js, react-native or expo project
+
+### For React.js
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```shell
+npm install @svgr-iconkit/fontawesome
+```
+
+  </TabItem>
+  
+  <TabItem value="yarn" label="yarn">
+
+```shell
+yarn add @svgr-iconkit/fontawesome
+```
+  </TabItem>
+</Tabs>
+
+### For React Native
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```shell
+npm install @svgr-iconkit/fontawesome react-native-svg
+```
+
+  </TabItem>
+  
+  <TabItem value="yarn" label="yarn">
+
+```shell
+yarn add @svgr-iconkit/fontawesome react-native-svg
+```
+  </TabItem>
+</Tabs>
+
+## Start your project
+
+Import icon from your project 
+
+### React.js for Web
+
+
+<CodesandboxPreview path="svgr-iconkit-simple-web-z43xm9"/>
+
+
+
+### React Native or Expo
+
+<ExpoSnackPreview path='@lemankk/svgr-iconkit---native-example' />
+
+#### Using react-native for website
+
+From 0.3.x, it's extending full set of properties from react-native via ```react-native-web```. It's suggested to define "custom.d.ts" in typescript or use "/native" entry to conform the typescript defintion. It make sure your styling properties converted as expected.
+
+##### Option 1 - Use /native entry
+
+```tsx title="src/App.tsx"
+import { View } from "react-native";
+import FontawesomeIcon from "@svgr-iconkit/fontawesome/native";
+
+export default function App() {
+  return <View>
+    <FontawesomeIcon name="heart" color="red" size={24} onPress={(evt) => { /** Do something **/ }} />
+  </View>
+}
+```
+
+##### Option 2 - Resolve by alias
+
+```typescript  title="custom.d.ts"
+// In custom.d.ts
+declare module "@svgr-iconkit/core" {
+  export * from "@svgr-iconkit/core/native"
+  export { default } from "@svgr-iconkit/core/native"
+}
+```
+
+```javascript title="webpack.config.js"
+const createExpoWebpackConfigAsync = require("@expo/webpack-config");
+
+// Expo CLI will await this method so you can optionally return a promise.
+module.exports = async function (env, argv) {
+  const config = await createExpoWebpackConfigAsync(env, argv);
+  // Resolving "react-native" module first.
+  config.resolve.mainFields = ['react-native', 'browser', 'module', 'main']
+  // Finally return the new config for the CLI to use.
+  return config;
+};
+
+```
+
+```tsx title="src/App.tsx"
+// In code
+import { View } from "react-native";
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function App() {
+  return <View>
+    <FontawesomeIcon name="heart" color="red" size={24} onPress={(evt) => { /** Do something **/ }} />
+  </View>
+}
+```
+

@@ -27,7 +27,7 @@
     "originalAuthor": {
       "name": "Font Awesome",
       "package": "@fortawesome/fontawesome-free",
-      "version": "6.0.0",
+      "version": "6.5.2",
       "url": "https://www.npmjs.com/package/@fortawesome/fontawesome-free"
     }
   },
@@ -43,7 +43,7 @@
     "originalAuthor": {
       "name": "Font Awesome",
       "package": "@fortawesome/fontawesome-free",
-      "version": "6.0.0",
+      "version": "6.5.2",
       "url": "https://www.npmjs.com/package/@fortawesome/fontawesome-free"
     }
   },
@@ -59,7 +59,7 @@
     "originalAuthor": {
       "name": "Microsoft",
       "package": "@fluentui/svg-icons",
-      "version": "1.1.175",
+      "version": "1.1.233",
       "url": "https://github.com/microsoft/fluentui-system-icons.git"
     }
   },
@@ -75,7 +75,7 @@
     "originalAuthor": {
       "name": "Feather by Cole Bemis & Contributors",
       "package": "feather-icons",
-      "version": "4.29.0",
+      "version": "4.29.1",
       "url": "https://feathericons.com"
     }
   },
@@ -106,7 +106,7 @@
     "originalAuthor": {
       "name": "Ant Design Icons",
       "package": "@ant-design/icons-svg",
-      "version": "4.2.1",
+      "version": "4.4.2",
       "url": "https://npmjs.com/package/@ant-design/icons"
     }
   },
@@ -138,7 +138,7 @@
     "originalAuthor": {
       "name": "ionicons by Ionic framework",
       "package": "ionicons",
-      "version": "6.0.2",
+      "version": "7.3.1",
       "url": "https://ionic.io/ionicons"
     }
   },
@@ -154,7 +154,7 @@
     "originalAuthor": {
       "name": "Primer",
       "package": "@primer/octicons",
-      "version": "17.3.0",
+      "version": "19.9.0",
       "url": "https://primer.style/octicons/"
     }
   },
@@ -169,7 +169,7 @@
     },
     "originalAuthor": {
       "name": "materialdesignicons.com",
-      "version": "6.9.96",
+      "version": "7.4.47",
       "package": "@mdi/svg",
       "url": "https://materialdesignicons.com/"
     }
@@ -202,7 +202,7 @@
     "originalAuthor": {
       "name": "Bootstrap Icons",
       "package": "bootstrap-icons",
-      "version": "1.8.3",
+      "version": "1.11.3",
       "url": "https://icons.getbootstrap.com/"
     }
   },
@@ -218,7 +218,7 @@
     "originalAuthor": {
       "name": "css.gg",
       "package": "css.gg",
-      "version": "2.0.0",
+      "version": "2.1.1",
       "url": "https://css.gg/"
     }
   },
@@ -235,7 +235,7 @@
     "originalAuthor": {
       "name": "heroicons",
       "package": "heroicons",
-      "version": "1.0.6",
+      "version": "2.1.3",
       "url": "https://npmjs.com/package/heroicons"
     }
   },
@@ -251,7 +251,7 @@
     "originalAuthor": {
       "name": "Simple Icons",
       "package": "simple-icons",
-      "version": "6.18.0",
+      "version": "11.11.0",
       "url": "https://simpleicons.org"
     }
   },
@@ -283,7 +283,7 @@
     "originalAuthor": {
       "name": "flag-icons",
       "package": "flag-icons",
-      "version": "6.6.2",
+      "version": "7.2.1",
       "url": "https://flagicons.lipis.dev/"
     }
   },
@@ -329,7 +329,7 @@
     "originalAuthor": {
       "name": "tabler-icons",
       "package": "@tabler/icons",
-      "version": "1.72.0",
+      "version": "3.1.0",
       "url": "https://tabler-icons.io/"
     }
   },
@@ -419,7 +419,7 @@
     "originalAuthor": {
       "name": "Remix Icons",
       "package": "remixicon",
-      "version": "2.5.0",
+      "version": "4.2.0",
       "url": "https://remixicon.com/"
     }
   },
@@ -435,7 +435,7 @@
     "originalAuthor": {
       "name": "primeicons",
       "package": "primeicons",
-      "version": "6.0.1",
+      "version": "7.0.0",
       "url": "https://github.com/primefaces/primeicons/"
     }
   }
