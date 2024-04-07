@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[9956],{5036:(e,c,t)=>{t.r(c),t.d(c,{default:()=>u});var i=t(7294),s=t(7234),n=t(4881);function u(){return i.createElement(s.Z,{packageName:"flat-color-icons",iconsetModule:n})}}}]);

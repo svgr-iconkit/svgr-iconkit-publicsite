@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[3101],{7275:(e,i,c)=>{c.r(i),c.d(i,{default:()=>u});var t=c(7294),n=c(7234),s=c(6519);function u(){return t.createElement(n.Z,{packageName:"ionicons",iconsetModule:s})}}}]);

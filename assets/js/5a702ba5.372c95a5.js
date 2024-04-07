@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[1562],{147:(e,i,c)=>{c.r(i),c.d(i,{default:()=>u});var t=c(7294),s=c(7234),n=c(9518);function u(){return t.createElement(s.Z,{packageName:"primeicons",iconsetModule:n})}}}]);

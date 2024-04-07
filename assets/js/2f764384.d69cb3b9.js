@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksvgr_iconkit_publicsite=self.webpackChunksvgr_iconkit_publicsite||[]).push([[4095],{2679:(e,t,c)=>{c.r(t),c.d(t,{default:()=>a});var i=c(7294),s=c(7234),u=c(7984);function a(){return i.createElement(s.Z,{packageName:"feather",iconsetModule:u})}}}]);
