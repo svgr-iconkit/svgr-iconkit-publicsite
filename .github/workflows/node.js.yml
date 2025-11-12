@@ -6,13 +6,40 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      app_version:
+        description: 'Select app version to build and deploy'
+        required: true
+        type: choice
+        options:
+          - ver2023
+          - ver2025
+        default: 'ver2025'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v4
+
+      - name: Determine app version
+        id: app_version
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "version=${{ inputs.app_version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=ver2023" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: ${{ steps.app_version.outputs.version == 'ver2025' && 'npm' || 'yarn' }}
+          cache-dependency-path: apps/${{ steps.app_version.outputs.version }}/${{ steps.app_version.outputs.version == 'ver2025' && 'package-lock.json' || 'yarn.lock' }}
+
 #       - name: Setup npmrc for github
 #         env:
 #           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -22,16 +49,23 @@ jobs:
 #           echo "always-auth = true" >> .npmrc
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        working-directory: apps/${{ steps.app_version.outputs.version }}
         run: |
-          #npm install --legacy-peer-deps
-          #npm run build
-          yarn install
-          yarn build
+          if [ -f "package-lock.json" ]; then
+            npm ci
+            npm run build
+          elif [ -f "yarn.lock" ]; then
+            yarn install --frozen-lockfile
+            yarn build
+          else
+            npm install
+            npm run build
+          fi
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+          folder: apps/${{ steps.app_version.outputs.version }}/build # The folder the action should deploy.
           
           
