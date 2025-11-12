@@ -1,0 +1,278 @@
+---
+sidebar_position: 6
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ExpoSnackPreview from '../../src/components/ExpoSnackPreview';
+
+# NativeWind
+
+## General use with individual iconkit
+
+You can use NativeWind utility classes directly with svgr-iconkit icons in React Native. NativeWind brings Tailwind CSS to React Native, allowing you to style icons using familiar Tailwind utility classes.
+
+## Installation
+
+First, install NativeWind and its dependencies:
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```shell
+npm install nativewind
+npm install --save-dev tailwindcss
+```
+
+  </TabItem>
+  
+  <TabItem value="yarn" label="yarn">
+
+```shell
+yarn add nativewind
+yarn add -D tailwindcss
+```
+
+  </TabItem>
+</Tabs>
+
+Then install the iconkit package:
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```shell
+npm install @svgr-iconkit/fontawesome react-native-svg
+```
+
+  </TabItem>
+  
+  <TabItem value="yarn" label="yarn">
+
+```shell
+yarn add @svgr-iconkit/fontawesome react-native-svg
+```
+
+  </TabItem>
+</Tabs>
+
+## Setup
+
+### 1. Configure Tailwind
+
+Create a `tailwind.config.js` file:
+
+```js title="tailwind.config.js"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./App.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+### 2. Configure Babel
+
+Update your `babel.config.js`:
+
+```js title="babel.config.js"
+module.exports = {
+  plugins: [
+    'nativewind/babel',
+  ],
+};
+```
+
+### 3. Import NativeWind CSS
+
+In your entry file (usually `App.js` or `index.js`):
+
+```js title="App.js"
+import './global.css';
+```
+
+Create `global.css`:
+
+```css title="global.css"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+## Basic Usage
+
+### Direct NativeWind Classes
+
+Apply NativeWind utility classes directly to icon components:
+
+```jsx title="src/components/IconExample.js"
+import { View } from 'react-native';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function IconExample() {
+  return (
+    <View className="flex-row gap-4 items-center">
+      {/* Basic icon with NativeWind classes */}
+      <FontawesomeIcon 
+        name="heart" 
+        className="w-6 h-6 text-red-500" 
+      />
+      
+      {/* Icon with different size */}
+      <FontawesomeIcon 
+        name="star" 
+        className="w-8 h-8 text-yellow-400" 
+      />
+      
+      {/* Icon with custom color */}
+      <FontawesomeIcon 
+        name="user" 
+        className="w-4 h-4 text-blue-500" 
+      />
+    </View>
+  );
+}
+```
+
+## Advanced Examples
+
+### Icons in Buttons
+
+```jsx title="src/components/IconButton.js"
+import { TouchableOpacity, Text, View } from 'react-native';
+import FeatherIcon from "@svgr-iconkit/feather";
+
+export default function IconButton({ icon, label, onPress }) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      className="flex-row items-center gap-2 px-4 py-2 bg-blue-500 rounded-lg active:bg-blue-700"
+    >
+      <FeatherIcon 
+        name={icon} 
+        className="w-5 h-5 text-white" 
+      />
+      <Text className="text-white font-semibold">{label}</Text>
+    </TouchableOpacity>
+  );
+}
+```
+
+### Icons with Badges and Notifications
+
+```jsx title="src/components/IconWithBadge.js"
+import { View, Text } from 'react-native';
+import MaterialDesignIcon from "@svgr-iconkit/material-design";
+
+export default function IconWithBadge() {
+  return (
+    <View className="relative">
+      <MaterialDesignIcon
+        name="notifications"
+        className="w-6 h-6 text-gray-600"
+      />
+      <View className="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 bg-red-500 rounded-full">
+        <Text className="text-xs font-bold text-white">3</Text>
+      </View>
+    </View>
+  );
+}
+```
+
+### Icons in Cards
+
+```jsx title="src/components/IconCard.js"
+import { View, Text } from 'react-native';
+import HeroiconsIcon from "@svgr-iconkit/heroicons";
+
+export default function IconCard({ icon, title, description }) {
+  return (
+    <View className="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+      <HeroiconsIcon
+        name={icon}
+        className="w-8 h-8 text-blue-500 mb-2"
+      />
+      <Text className="text-lg font-bold text-gray-800">{title}</Text>
+      <Text className="text-sm text-gray-600 mt-1">{description}</Text>
+    </View>
+  );
+}
+```
+
+### Icons in Lists
+
+```jsx title="src/components/IconListItem.js"
+import { View, Text, TouchableOpacity } from 'react-native';
+import TablerIcon from "@svgr-iconkit/tabler-icons";
+
+export default function IconListItem({ icon, title, subtitle, onPress }) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      className="flex-row items-center gap-3 p-4 bg-white border-b border-gray-200 active:bg-gray-50"
+    >
+      <TablerIcon
+        name={icon}
+        className="w-6 h-6 text-gray-600"
+      />
+      <View className="flex-1">
+        <Text className="text-base font-semibold text-gray-800">{title}</Text>
+        {subtitle && (
+          <Text className="text-sm text-gray-500 mt-1">{subtitle}</Text>
+        )}
+      </View>
+      <TablerIcon
+        name="chevron-right"
+        className="w-5 h-5 text-gray-400"
+      />
+    </TouchableOpacity>
+  );
+}
+```
+
+### Using with NativeWind's Color System
+
+Leverage NativeWind's color palette for dynamic icon colors:
+
+```jsx title="src/components/ColorfulIcons.js"
+import { View } from 'react-native';
+import SimpleIconsIcon from "@svgr-iconkit/simple-icons";
+
+export default function ColorfulIcons() {
+  const colors = [
+    "text-red-500",
+    "text-blue-500",
+    "text-green-500",
+    "text-yellow-500",
+    "text-purple-500",
+  ];
+
+  return (
+    <View className="flex-row gap-4">
+      {colors.map((colorClass, index) => (
+        <SimpleIconsIcon
+          key={index}
+          name="react"
+          className={`w-8 h-8 ${colorClass}`}
+        />
+      ))}
+    </View>
+  );
+}
+```
+
+## Notes
+
+- Icons accept `className` prop for NativeWind utility classes
+- Use `w-*` and `h-*` classes for sizing, or use the `size`/`fontSize` props
+- Colors can be controlled via `text-*` classes or the `color` prop
+- NativeWind works seamlessly with React Native components
+- For best results, ensure your Tailwind config includes the necessary utilities
+- Make sure to use the `/native` entry point for React Native compatibility
+
+<ExpoSnackPreview path='@lemankk/svgr-iconkit-examples---nativewind' />
+

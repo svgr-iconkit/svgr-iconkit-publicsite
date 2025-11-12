@@ -1,0 +1,366 @@
+---
+sidebar_position: 3
+---
+import CodesandboxPreview from '../../src/components/CodesandboxPreview';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Next.js Example
+
+## Installation
+
+Install the iconkit package in your Next.js project:
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```shell
+npm install @svgr-iconkit/fontawesome
+```
+
+  </TabItem>
+  
+  <TabItem value="yarn" label="yarn">
+
+```shell
+yarn add @svgr-iconkit/fontawesome
+```
+
+  </TabItem>
+  
+  <TabItem value="pnpm" label="pnpm">
+
+```shell
+pnpm add @svgr-iconkit/fontawesome
+```
+
+  </TabItem>
+</Tabs>
+
+## App Router (Next.js 13+)
+
+### Server Components (Default)
+
+Icons work seamlessly in Server Components. Since svgr-iconkit supports RSC (React Server Components), you can use icons directly in server components:
+
+```tsx title="app/page.tsx"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function HomePage() {
+  return (
+    <div className="flex gap-4 items-center p-8">
+      <FontawesomeIcon name="heart" color="red" size={24} />
+      <FontawesomeIcon name="star" color="gold" size={24} />
+      <FontawesomeIcon name="user" color="blue" size={24} />
+    </div>
+  );
+}
+```
+
+### Client Components
+
+For interactive icons or when using hooks, use the `'use client'` directive:
+
+```tsx title="app/components/InteractiveIcon.tsx"
+'use client';
+
+import { useState } from 'react';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function InteractiveIcon() {
+  const [liked, setLiked] = useState(false);
+
+  return (
+    <button
+      onClick={() => setLiked(!liked)}
+      className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+    >
+      <FontawesomeIcon
+        name={liked ? "heart" : "heart"}
+        color={liked ? "red" : "gray"}
+        size={20}
+      />
+      <span>{liked ? "Liked" : "Like"}</span>
+    </button>
+  );
+}
+```
+
+### Icon Component with Tailwind CSS
+
+```tsx title="app/components/IconButton.tsx"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+interface IconButtonProps {
+  icon: string;
+  label: string;
+  onClick?: () => void;
+}
+
+export default function IconButton({ icon, label, onClick }: IconButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+    >
+      <FontawesomeIcon name={icon} className="w-5 h-5" />
+      <span>{label}</span>
+    </button>
+  );
+}
+```
+
+### Navigation with Icons
+
+```tsx title="app/components/NavLink.tsx"
+import Link from 'next/link';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+interface NavLinkProps {
+  href: string;
+  icon: string;
+  label: string;
+}
+
+export default function NavLink({ href, icon, label }: NavLinkProps) {
+  return (
+    <Link
+      href={href}
+      className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-50 rounded-lg transition-colors"
+    >
+      <FontawesomeIcon name={icon} className="w-5 h-5" />
+      <span>{label}</span>
+    </Link>
+  );
+}
+```
+
+### Layout with Icons
+
+```tsx title="app/layout.tsx"
+import type { Metadata } from 'next';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'My App',
+  description: 'App with svgr-iconkit',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <header className="border-b">
+          <nav className="container mx-auto px-4 py-4 flex items-center gap-4">
+            <FontawesomeIcon name="home" className="w-6 h-6 text-blue-500" />
+            <h1 className="text-xl font-bold">My App</h1>
+          </nav>
+        </header>
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+```
+
+## Pages Router (Next.js 12 and below)
+
+### Basic Page Component
+
+```tsx title="pages/index.tsx"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function HomePage() {
+  return (
+    <div className="flex gap-4 items-center p-8">
+      <FontawesomeIcon name="heart" color="red" size={24} />
+      <FontawesomeIcon name="star" color="gold" size={24} />
+      <FontawesomeIcon name="user" color="blue" size={24} />
+    </div>
+  );
+}
+```
+
+### API Route Example
+
+```tsx title="pages/api/icon-info.ts"
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  res.status(200).json({
+    message: 'Icons are available in API routes too!',
+    icons: ['heart', 'star', 'user'],
+  });
+}
+```
+
+## Advanced Examples
+
+### Dynamic Icon Loading
+
+```tsx title="app/components/DynamicIcon.tsx"
+import { Suspense } from 'react';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+interface DynamicIconProps {
+  iconName: string;
+  size?: number;
+  color?: string;
+}
+
+export default function DynamicIcon({ 
+  iconName, 
+  size = 24, 
+  color = "currentColor" 
+}: DynamicIconProps) {
+  return (
+    <Suspense fallback={<div className="w-6 h-6 animate-pulse bg-gray-200 rounded" />}>
+      <FontawesomeIcon name={iconName} size={size} color={color} />
+    </Suspense>
+  );
+}
+```
+
+### Icon with Loading State
+
+```tsx title="app/components/LoadingIcon.tsx"
+'use client';
+
+import { useState, useEffect } from 'react';
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function LoadingIcon() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center gap-2">
+        <FontawesomeIcon 
+          name="spinner" 
+          className="w-5 h-5 animate-spin text-blue-500" 
+        />
+        <span>Loading...</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-2">
+      <FontawesomeIcon name="check-circle" className="w-5 h-5 text-green-500" />
+      <span>Loaded!</span>
+    </div>
+  );
+}
+```
+
+### Icon Grid Component
+
+```tsx title="app/components/IconGrid.tsx"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+const icons = ['heart', 'star', 'user', 'home', 'settings', 'search'];
+
+export default function IconGrid() {
+  return (
+    <div className="grid grid-cols-3 md:grid-cols-6 gap-4 p-8">
+      {icons.map((icon) => (
+        <div
+          key={icon}
+          className="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+        >
+          <FontawesomeIcon 
+            name={icon} 
+            className="w-8 h-8 text-gray-700" 
+          />
+          <span className="text-xs text-gray-600 capitalize">{icon}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+### Icon with Badge
+
+```tsx title="app/components/IconWithBadge.tsx"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+interface IconWithBadgeProps {
+  icon: string;
+  count: number;
+}
+
+export default function IconWithBadge({ icon, count }: IconWithBadgeProps) {
+  return (
+    <div className="relative inline-block">
+      <FontawesomeIcon 
+        name={icon} 
+        className="w-6 h-6 text-gray-600" 
+      />
+      {count > 0 && (
+        <span className="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 rounded-full">
+          {count}
+        </span>
+      )}
+    </div>
+  );
+}
+```
+
+## TypeScript Support
+
+Next.js works seamlessly with TypeScript. Icons are fully typed:
+
+```tsx title="app/components/TypedIcon.tsx"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+interface TypedIconProps {
+  icon: string;
+  size?: number;
+  className?: string;
+}
+
+export default function TypedIcon({ 
+  icon, 
+  size = 24, 
+  className 
+}: TypedIconProps) {
+  return (
+    <FontawesomeIcon
+      name={icon}
+      size={size}
+      className={className}
+    />
+  );
+}
+```
+
+## CodeSandbox Example
+
+<CodesandboxPreview path="svgr-iconkit-nextjs-example" />
+
+## Notes
+
+- **RSC Support**: Icons work in Server Components by default (no 'use client' needed)
+- **Client Components**: Use 'use client' when you need interactivity or hooks
+- **App Router**: Recommended for new Next.js projects (Next.js 13+)
+- **Pages Router**: Still supported for existing projects
+- **TypeScript**: Full TypeScript support out of the box
+- **Performance**: Icons are optimized for Next.js's server-side rendering
+- **Styling**: Works with Tailwind CSS, CSS Modules, and styled-components
+
+
+

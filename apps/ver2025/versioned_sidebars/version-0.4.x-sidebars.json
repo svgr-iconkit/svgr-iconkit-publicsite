@@ -1,0 +1,39 @@
+{
+  "tutorialSidebar": [
+    {
+      "type": "doc",
+      "label": "Intro",
+      "id": "intro"
+    },
+    {
+      "type": "category",
+      "label": "Core",
+      "items": ["core/properties"]
+    },
+    {
+      "type": "category",
+      "label": "Integration",
+      "items": [
+        "integration/with-styled-components",
+        "integration/with-react-native-paper",
+        "integration/with-nativebase"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Advanced Usage",
+      "items": [
+        "advanced-usage/create-owned-iconset",
+        "advanced-usage/individual-use"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Examples",
+      "items": [
+        "examples/expo-example",
+        "examples/rating"
+      ]
+    }
+  ]
+}

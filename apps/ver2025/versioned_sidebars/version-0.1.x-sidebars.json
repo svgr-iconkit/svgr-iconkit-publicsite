@@ -1,0 +1,32 @@
+{
+  "tutorialSidebar": [
+    {
+      "type": "doc",
+      "label": "Intro",
+      "id": "intro"
+    },
+    {
+      "type": "category",
+      "label": "Core",
+      "items": ["core/properties"]
+    },
+    {
+      "type": "category",
+      "label": "Integration",
+      "items": [
+        "integration/with-styled-components",
+        "integration/with-nativebase"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Advanced Usage",
+      "items": ["advanced-usage/create-owned-iconset"]
+    },
+    {
+      "type": "category",
+      "label": "Examples",
+      "items": ["examples/expo-explorer"]
+    }
+  ]
+}

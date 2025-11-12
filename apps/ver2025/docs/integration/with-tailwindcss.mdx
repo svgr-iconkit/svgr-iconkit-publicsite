@@ -1,0 +1,261 @@
+---
+sidebar_position: 5
+---
+
+# Tailwind CSS
+
+## General use with individual iconkit
+
+You can use Tailwind CSS utility classes directly with svgr-iconkit icons. Since icons are rendered as SVG elements, you can apply Tailwind classes for styling, sizing, colors, and interactive states.
+
+## Basic Usage
+
+### Direct Tailwind Classes
+
+Apply Tailwind utility classes directly to icon components:
+
+```jsx title="src/components/IconExample.js"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+
+export default function IconExample() {
+  return (
+    <div className="flex gap-4 items-center">
+      {/* Basic icon with Tailwind classes */}
+      <FontawesomeIcon 
+        name="heart" 
+        className="w-6 h-6 text-red-500" 
+      />
+      
+      {/* Icon with hover effect */}
+      <FontawesomeIcon 
+        name="star" 
+        className="w-8 h-8 text-yellow-400 hover:text-yellow-600 transition-colors cursor-pointer" 
+      />
+      
+      {/* Icon with responsive sizing */}
+      <FontawesomeIcon 
+        name="user" 
+        className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 text-blue-500" 
+      />
+    </div>
+  );
+}
+```
+
+## Creating a Tailwind-Styled Icon Component
+
+Create a reusable icon component with Tailwind classes:
+
+```jsx title="src/components/TailwindIcon.js"
+import FontawesomeIcon from "@svgr-iconkit/fontawesome";
+import clsx from "clsx"; // or use a simple template literal
+
+export default function TailwindIcon({ 
+  name, 
+  variant = "regular",
+  size = "md",
+  color = "current",
+  className,
+  ...props 
+}) {
+  const sizeClasses = {
+    sm: "w-4 h-4",
+    md: "w-6 h-6",
+    lg: "w-8 h-8",
+    xl: "w-12 h-12",
+  };
+
+  const colorClasses = {
+    current: "text-current",
+    primary: "text-blue-500",
+    secondary: "text-gray-500",
+    success: "text-green-500",
+    danger: "text-red-500",
+    warning: "text-yellow-500",
+  };
+
+  return (
+    <FontawesomeIcon
+      name={name}
+      variant={variant}
+      className={clsx(
+        sizeClasses[size],
+        colorClasses[color],
+        className
+      )}
+      {...props}
+    />
+  );
+}
+```
+
+```jsx title="src/pages/HomePage.js"
+import TailwindIcon from "@/components/TailwindIcon";
+
+export default function HomePage() {
+  return (
+    <div className="p-8 space-y-4">
+      <div className="flex gap-4">
+        <TailwindIcon name="home" size="sm" color="primary" />
+        <TailwindIcon name="settings" size="md" color="secondary" />
+        <TailwindIcon name="user" size="lg" color="success" />
+      </div>
+      
+      {/* With custom classes */}
+      <TailwindIcon 
+        name="heart" 
+        size="xl" 
+        className="animate-pulse text-red-500" 
+      />
+    </div>
+  );
+}
+```
+
+## Advanced Examples
+
+### Icons with Interactive States
+
+```jsx title="src/components/InteractiveIcon.js"
+import HeroiconsIcon from "@svgr-iconkit/heroicons";
+
+export default function InteractiveIcon() {
+  return (
+    <div className="space-y-4">
+      {/* Hover effect */}
+      <HeroiconsIcon
+        name="heart"
+        className="w-6 h-6 text-gray-400 hover:text-red-500 transition-colors duration-200 cursor-pointer"
+      />
+      
+      {/* Active state */}
+      <button className="group">
+        <HeroiconsIcon
+          name="star"
+          className="w-6 h-6 text-gray-400 group-hover:text-yellow-500 group-active:scale-110 transition-all duration-200"
+        />
+      </button>
+      
+      {/* Focus state for accessibility */}
+      <button className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+        <HeroiconsIcon
+          name="bell"
+          className="w-6 h-6 text-gray-600 focus-within:text-blue-500"
+        />
+      </button>
+    </div>
+  );
+}
+```
+
+### Icons in Buttons
+
+```jsx title="src/components/IconButton.js"
+import FeatherIcon from "@svgr-iconkit/feather";
+
+export default function IconButton({ icon, label, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+    >
+      <FeatherIcon 
+        name={icon} 
+        className="w-5 h-5" 
+      />
+      <span>{label}</span>
+    </button>
+  );
+}
+```
+
+### Icons with Badges and Notifications
+
+```jsx title="src/components/IconWithBadge.js"
+import MaterialDesignIcon from "@svgr-iconkit/material-design";
+
+export default function IconWithBadge() {
+  return (
+    <div className="relative inline-block">
+      <MaterialDesignIcon
+        name="notifications"
+        className="w-6 h-6 text-gray-600"
+      />
+      <span className="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 rounded-full">
+        3
+      </span>
+    </div>
+  );
+}
+```
+
+### Responsive Icon Sizing
+
+```jsx title="src/components/ResponsiveIcon.js"
+import TablerIcon from "@svgr-iconkit/tabler-icons";
+
+export default function ResponsiveIcon() {
+  return (
+    <TablerIcon
+      name="menu"
+      className="w-6 h-6 sm:w-8 sm:h-6 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-800"
+    />
+  );
+}
+```
+
+## Using with Tailwind's Color System
+
+Leverage Tailwind's color palette for dynamic icon colors:
+
+```jsx title="src/components/ColorfulIcons.js"
+import SimpleIconsIcon from "@svgr-iconkit/simple-icons";
+
+export default function ColorfulIcons() {
+  const colors = [
+    "text-red-500",
+    "text-blue-500",
+    "text-green-500",
+    "text-yellow-500",
+    "text-purple-500",
+  ];
+
+  return (
+    <div className="flex gap-4">
+      {colors.map((colorClass, index) => (
+        <SimpleIconsIcon
+          key={index}
+          name="react"
+          className={`w-8 h-8 ${colorClass} hover:scale-110 transition-transform`}
+        />
+      ))}
+    </div>
+  );
+}
+```
+
+## Dark Mode Support
+
+Icons automatically adapt to Tailwind's dark mode:
+
+```jsx title="src/components/DarkModeIcon.js"
+import OcticonsIcon from "@svgr-iconkit/octicons";
+
+export default function DarkModeIcon() {
+  return (
+    <OcticonsIcon
+      name="sun"
+      className="w-6 h-6 text-gray-800 dark:text-yellow-400 transition-colors"
+    />
+  );
+}
+```
+
+## Notes
+
+- Icons accept `className` prop for Tailwind utility classes
+- Use `w-*` and `h-*` classes for sizing, or use the `size`/`fontSize` props
+- Colors can be controlled via `text-*` classes or the `color` prop
+- Icons work seamlessly with Tailwind's responsive, hover, focus, and dark mode utilities
+- For best results, ensure your Tailwind config includes the necessary utilities
+

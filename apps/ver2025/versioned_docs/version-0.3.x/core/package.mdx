@@ -1,0 +1,46 @@
+---
+sidebar_position: 1
+---
+import CodesandboxPreview from '../../../src/components/CodesandboxPreview'
+
+# Package 
+
+## Default export
+
+In every iconset package, it provides few thing from the exports:
+
+
+| name | type | description |
+| ---- | ---- | ------- |
+| ```Iconset``` | ```Component<IconProps>``` | (Default export) The iconset component contain all variants and content |
+| ```variants``` | ```Record<string, Component<IconProps>>``` | Indvidual groupped component by variant name. |
+| ```map``` | ```Record<string, Record<string, IconSVG>>``` | Raw data of the icon, grouped by variant and icon name|
+| ```colorize``` | ```boolean``` | Given ```true``` if the iconset support coloring to the content |
+| ```iconNames``` | ```Array<string>``` | The list of icon names |
+| ```variantNames``` | ```Array<string>``` | The list of variant names |
+
+## Specified icon
+
+If you need specified icon(s) only, you are allowed to import one or serveal files that you only needed.
+
+You can follow below pattern when import from the package
+
+```package-name```/icons/```variant name```/```icon name```
+
+Example:
+```jsx 
+import HeartIconData from "@svgr-iconkit/fontawesome/icons/regular/heart"
+import { Icon } from "@svgr-iconkit/core"
+
+export default () => {
+  return <Icon content={HeartIconData} size="24" color="blue" />
+}
+
+```
+
+### Example
+
+<CodesandboxPreview path='svgr-iconkit-examples-specified-icon-dqmr0x' />
+
+[Demo on codesandbox](https://codesandbox.io/s/svgriconkit-examples-specified-icon-bbdmop)
+
