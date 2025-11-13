@@ -51,16 +51,10 @@ jobs:
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         working-directory: apps/${{ steps.app_version.outputs.version }}
         run: |
-          if [ -f "package-lock.json" ]; then
-            npm ci
-            npm run build
-          elif [ -f "yarn.lock" ]; then
-            yarn install --frozen-lockfile
+          
+            yarn install 
             yarn build
-          else
-            npm install
-            npm run build
-          fi
+          
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
